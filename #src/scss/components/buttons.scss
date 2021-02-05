@@ -2,8 +2,22 @@
 @import "../abstracts/variables";
 
 .btn {
+  padding: 12px 24px;
+  background: transparent;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  @include transition(.3);
   &-primary {
-
+    background: $goldenColor;
+    color: $whiteColor;
+    &:hover {
+      background: transparent;
+      color: $goldenColor;
+      border-color: $goldenColor;
+    }
   }
   &-secondary {
     

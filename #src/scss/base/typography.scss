@@ -60,8 +60,13 @@
 }
 
 
-.section-heading {
-  font-weight: 900;
-  @include fontSize(36, 56);
+.section-title {
+  @include fontSize(70, 133);
   line-height: 1;
+  font-weight: 700;
+  color: $greyColor;
+  & span {
+    color: $goldenColor;
+    font-weight: 700;
+  }
 }

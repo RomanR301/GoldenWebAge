@@ -16,8 +16,10 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="row">
-        <div class="header-logo"></div>
+      <div class="row align-middle">
+        <a href="#" class="header-logo">
+          <img src="./img/main-logo.svg" alt="Web Golden Age logo">
+        </a>
         <div class="navbar">
           <ul class="menu">
             <li class="menu-item">
@@ -28,6 +30,9 @@
             </li>
             <li class="menu-item menu-item-has-child">
               <a href="#">Services</a>
+              <button class="nav-btn">
+                <i class="icon-icon-arrow-bottom"></i>
+              </button>
               <ul class="sub-menu">
                 <li class="menu-item">
                   <a href="#">UX/UI Web Design</a>
@@ -69,17 +74,47 @@
               E-Mail: info@goldenwebage.de</p>
           </div>
         </div>
-        <div class="header-cta"></div>
+        <div class="header-cta btn btn-primary">Contact Us</div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   </header>
   <div class="body-padding"></div>
 <main>
-  MAIN CONTENT
+  <section class="hero-screen">
+    <div class="container">
+      <div class="row align-middle">
+        <div class="col-md-6">
+          <div class="hero-screen__text">
+            <h1 class="section-title">
+              <span>GOLDEN</span> <br>WEB AGE
+            </h1>
+            <h2 class="hero-screen__subtitle">
+              WEB and SEO PERFORMANCE AGENCY
+            </h2>
+            <h4 class="hero-screen__description">
+              Full service digital studio based in München, Germany. We are a full service digital agency specialising in
+              Web Design, SEO, SEA and Hosting
+            </h4>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="hero-screen__image">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
-  FOOTER
+  <!-- FOOTER -->
 </footer>
 
 <script src="js/libs.min.js"></script>

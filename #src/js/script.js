@@ -113,6 +113,52 @@ let modal = {
              }, "slow");
       });
 
+
+
+      if (window.matchMedia("(min-width: 992px)").matches) {
+        $(document).on('click', '.nav-btn', function (e) {
+            $('.menu-item-has-child').toggleClass('show');
+        });
+
+        $('html').click(function(e) {
+            var a = e.target;
+            if ($(a).parents('.menu-item-has-child').length === 0) {
+              $('.menu-item-has-child').removeClass('show'); //hide menu item
+           }
+          });
+      } else {
+        $(document).on('click', '.nav-btn', function (e) {
+            e.preventDefault();
+            var navTitle = document.createElement("p");
+            var navBack = document.createElement("span");
+            navTitle.className = "nav-title";        
+            navBack.className = "prev-page"
+            navBack.innerHTML = '<i class="icon-arrow-big"></i>Назад';
+            navTitle.innerHTML = $(this).parent().text();
+            $(this).parent().next().append(navBack);
+            $(this).parent().next('.sub-menu').prepend(navTitle);
+            if (!$(this).parent().next('.sub-menu').hasClass('menuOpen')) {
+                $(this).parent().next('.sub-menu').addClass('menuOpen');
+                $(this).parent().parent().addClass('show');
+            } else {
+                $(this).parent().next('.sub-menu').removeClass("menuOpen");
+            }
+        });
+        
+        
+        $(document).on('click', '.prev-page', function (e) {
+            e.preventDefault();
+            if ($(this).parent().hasClass('menuOpen')) {
+                $(this).parent().removeClass("menuOpen");
+                $(this).parent().find('p').remove();
+                $(this).parent().find('span').remove();
+                $(this).parent().parent().removeClass('show');
+            }
+        });
+      }
+
+      
+      
   }
 };
 
@@ -123,14 +169,6 @@ jQuery(function () {
     
 });
 
-// $(window).scroll(function () {
-//   if ($(this).scrollTop() > 10) {
-//     $('.scroll-to-top').addClass("scrolled");
-//   } else {
-//   	$('.scroll-to-top').removeClass("scrolled");
-//   }
-// });
-
 document.body.addEventListener('keyup', function(e) {
   if (e.which === 9) /* tab */ {
     document.body.classList.remove('no-focus-outline');
@@ -140,10 +178,12 @@ document.body.addEventListener('keyup', function(e) {
 
 // HIDE MENU ON BODY CLICK
 
-// $('html').click(function(e) {
-//     var a = e.target;
-//     if ($(a).parents('.menu-item-has-child').length === 0) {
-//       $('.menu-item-has-child').removeClass('show'); //hide menu item
-//    }
-//   });
 
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 10) {
+      $('.header').addClass("scroll-header");
+    } else {
+        $('.header').removeClass("scroll-header");
+    }
+  });

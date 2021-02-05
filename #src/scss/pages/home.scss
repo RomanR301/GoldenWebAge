@@ -4,3 +4,30 @@
 body {
   border: 20px solid #D4B982;
 }
+
+.hero-screen {
+  height: calc(100vh - 120px);
+  position: relative;
+  & .container, & .row, & .col-md-6 {
+    height: 100%;
+  }
+  &__text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 120px;
+  }
+  &__subtitle {
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 50px;
+    color: $goldenColor;
+    white-space: nowrap;
+    margin-bottom: 26px;
+  }
+  &__description {
+    width: 63%;
+  }
+
+}
