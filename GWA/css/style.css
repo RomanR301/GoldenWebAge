@@ -1,32 +1,48 @@
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/Gilroy-Black.woff") format("woff");
+  font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  src: url("../fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
-  font-weight: 600;
+  src: url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Mont";
+  font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Mont-SemiBold.woff2") format("woff2");
-  font-weight: 600;
+  src: url("../fonts/Gilroy-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -52,6 +68,56 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-arrow-bottom:before {
+  content: "\e900";
+  color: #5c5c5c;
+}
+
+.icon-icon-arrow-left-big:before {
+  content: "\e901";
+  color: #d4b982;
+}
+
+.icon-icon-arrow-right:before {
+  content: "\e902";
+  color: #d4b982;
+}
+
+.icon-icon-arrow-top:before {
+  content: "\e903";
+  color: #00cd98;
+}
+
+.icon-icon-checkmark:before {
+  content: "\e904";
+  color: #d4b982;
+}
+
+.icon-icon-facebook:before {
+  content: "\e907";
+  color: #d4b982;
+}
+
+.icon-icon-heart:before {
+  content: "\e908";
+  color: #d4b982;
+}
+
+.icon-icon-instagram:before {
+  content: "\e909";
+  color: #fff;
+}
+
+.icon-icon-star:before {
+  content: "\e90a";
+  color: #fbbc05;
+}
+
+.icon-icon-twitter:before {
+  content: "\e90b";
+  color: #fff;
 }
 
 .--relative {
@@ -159,8 +225,8 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: 'Montserrat', sans-serif;
-  color: #ffffff;
+  font-family: 'Gilroy', sans-serif;
+  color: #292620;
   font-weight: 400;
   vertical-align: baseline;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -168,12 +234,12 @@ video {
 
 body {
   position: relative;
-  background: #000000;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  color: #292620;
+  font-family: 'Gilroy', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .no-focus-outline a:focus,
@@ -276,46 +342,39 @@ input[type=number] {
 }
 
 .heading-1 {
-  font-size: 60px;
-  font-size: calc(40px + (60 - 40) * ((100vw - 300px) / (1900 - 300)));
-  line-height: 1.07;
+  font-size: 133px;
+  font-size: calc(70px + (133 - 70) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1;
 }
 
 .heading-2 {
-  font-size: 50px;
-  font-size: calc(28px + (50 - 28) * ((100vw - 300px) / (1900 - 300)));
-  line-height: 1.33;
+  font-size: 100px;
+  font-size: calc(45px + (100 - 45) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1;
 }
 
 .heading-3 {
-  font-size: 42px;
-  font-size: calc(24px + (42 - 24) * ((100vw - 300px) / (1900 - 300)));
-  line-height: 1.16;
-}
-
-.heading-3 {
-  font-size: 24px;
-  font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1900 - 300)));
-  line-height: 1.1;
-  font-weight: 700;
+  font-size: 60px;
+  font-size: calc(45px + (60 - 45) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.05;
 }
 
 .heading-4 {
-  font-size: 36px;
-  font-size: calc(16px + (36 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-size: 45px;
+  font-size: calc(40px + (45 - 40) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.1;
+}
+
+.heading-5 {
+  font-size: 30px;
+  font-size: calc(24px + (30 - 24) * ((100vw - 300px) / (1900 - 300)));
   line-height: 1.33;
 }
 
 .heading-5 {
-  font-size: 24px;
-  font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (1900 - 300)));
-  line-height: 1.33;
-}
-
-.heading-5 {
-  font-size: 16px;
-  font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
-  line-height: 1.33;
+  font-size: 20px;
+  font-size: calc(20px + (20 - 20) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.8;
 }
 
 .section-heading {
@@ -325,43 +384,8 @@ input[type=number] {
   line-height: 1;
 }
 
-.icon-icon-arrow:before {
-  content: "\e900";
-  color: #fff;
-}
-
-.icon-icon-bing:before {
-  content: "\e901";
-  color: #fff;
-}
-
-.icon-icon-cart:before {
-  content: "\e902";
-  color: #fff;
-}
-
-.icon-icon-four-sides:before {
-  content: "\e903";
-  color: #fff;
-}
-
-.icon-icon-lines:before {
-  content: "\e904";
-  color: #fff;
-}
-
-.icon-icon-people:before {
-  content: "\e905";
-  color: #fff;
-}
-
-.icon-icon-search:before {
-  content: "\e906";
-  color: #fff;
-}
-
 .container {
-  max-width: 1640px;
+  max-width: 1780px;
   margin: auto;
   padding: 0 15px;
 }
@@ -594,6 +618,10 @@ input[type=number] {
 
 .body-padding {
   padding-top: 70px;
+}
+
+body {
+  border: 20px solid #D4B982;
 }
 
 @media (min-width: 576px) {
@@ -941,31 +969,16 @@ input[type=number] {
 }
 
 @media (min-width: 1800px) {
-  .heading-1 {
-    font-size: 80px;
-    font-size: calc(50px + (80 - 50) * ((100vw - 300px) / (1900 - 300)));
-  }
-
-  .heading-2 {
-    font-size: 62px;
-    font-size: calc(34px + (62 - 34) * ((100vw - 300px) / (1900 - 300)));
-  }
-
-  .heading-3 {
-    font-size: 54px;
-    font-size: calc(28px + (54 - 28) * ((100vw - 300px) / (1900 - 300)));
-  }
-
-  .heading-3 {
-    font-size: 33px;
-  }
-
   .body-padding {
     padding-top: 90px;
   }
 }
 
 @media (max-width: 767px) {
+  .container {
+    padding: 0;
+  }
+
   .m-0-mob {
     margin: 0;
   }

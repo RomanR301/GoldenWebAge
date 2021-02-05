@@ -1,7 +1,9 @@
-@include font("Montserrat", "Montserrat-Regular", "400", "normal");
-@include font("Montserrat", "Montserrat-Medium", "500", "normal");
-@include font("Montserrat", "Montserrat-SemiBold", "600", "normal");
-@include font("Mont", "Mont-SemiBold", "600", "normal");
+@include font("Gilroy", "Gilroy-Black", "900", "normal");
+@include font("Gilroy", "Gilroy-Bold", "700", "normal");
+@include font("Gilroy", "Gilroy-SemiBold", "600", "normal");
+@include font("Gilroy", "Gilroy-Medium", "500", "normal");
+@include font("Gilroy", "Gilroy-Regular", "400", "normal");
+@include font("Gilroy", "Gilroy-Light", "300", "normal");
 
 
 @font-face {
@@ -29,4 +31,45 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-arrow-bottom:before {
+  content: "\e900";
+  color: #5c5c5c;
+}
+.icon-icon-arrow-left-big:before {
+  content: "\e901";
+  color: #d4b982;
+}
+.icon-icon-arrow-right:before {
+  content: "\e902";
+  color: #d4b982;
+}
+.icon-icon-arrow-top:before {
+  content: "\e903";
+  color: #00cd98;
+}
+.icon-icon-checkmark:before {
+  content: "\e904";
+  color: #d4b982;
+}
+.icon-icon-facebook:before {
+  content: "\e907";
+  color: #d4b982;
+}
+.icon-icon-heart:before {
+  content: "\e908";
+  color: #d4b982;
+}
+.icon-icon-instagram:before {
+  content: "\e909";
+  color: #fff;
+}
+.icon-icon-star:before {
+  content: "\e90a";
+  color: #fbbc05;
+}
+.icon-icon-twitter:before {
+  content: "\e90b";
+  color: #fff;
 }
