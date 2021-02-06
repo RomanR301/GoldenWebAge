@@ -1,22 +1,25 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-body {
-  border: 20px solid #D4B982;
-}
-
 .hero-screen {
-  height: calc(100vh - 120px);
+  height: calc(100vh - 20px);
   position: relative;
   & .container, & .row, & .col-md-6 {
     height: 100%;
+  }
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
   &__text {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 120px;
   }
   &__subtitle {
     font-weight: 900;
@@ -25,9 +28,84 @@ body {
     color: $goldenColor;
     white-space: nowrap;
     margin-bottom: 26px;
+    @media (max-width: $breakpoint-xxl) {
+      white-space: unset;
+    }
   }
   &__description {
     width: 63%;
   }
+  &__image {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    & img {
+      @include defaultIcon(contain);
+      object-position: 0 80%;
+    }
+  }
+}
 
+.frame {
+  position: absolute;
+  padding: 30px 26px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  &__search {
+    top: 15%;
+    left: 12%;
+  }
+  &__conversion {
+    right: 0;
+    bottom: 0;
+  }
+  &__perfomance {
+    left: 0;
+    bottom: 0;
+  }
+}
+
+
+.we-provide {
+  background: $goldenColor;
+  padding: 78px 0 100px 0;
+  position: relative;
+  margin-bottom: 150px;
+  &:before {
+    content: '';
+    position: absolute;
+    background: url('../../img/thick-lines-white.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__title {
+    & .small {
+      color: $greyColor;
+      font-weight: 900;
+      font-size: 45px;
+      line-height: 1.4;
+    }
+    & .golden2 {
+      color: $goldenColor2;
+      font-weight: 700;
+      font-size: 130px;
+      line-height: 1;
+      &:last-child {
+        margin-left: 50px;
+      }
+    }
+  }
+  &__description {
+    margin-right: 40px;
+  }
+}
+
+.recent {
+  margin-bottom: 150px;
 }

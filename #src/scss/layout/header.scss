@@ -29,18 +29,6 @@
   }
 }
 
-.body-padding {
-  padding-top: 110px;
-}
-
-
-body {
-  height: 400vh
-}
-
-
-
-
 .navbar {
   @include transition(.3);
   margin-left: auto;
@@ -68,9 +56,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  & .sub-menu {
-    display: none;
   }
   &-item {
     margin-right: 66px;
@@ -112,11 +97,37 @@ body {
   & .sub-menu {
     position: absolute;
     left: 0;
-    width: 100%;
+    top: 90px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background: $whiteColor;
+    width: 410px;
+    padding: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, -20px);
+    @include transition(.3);
+    & .menu-item {
+      margin: 0 0 10px 0;
+      line-height: 1.5;
+      overflow: hidden;
+      & a {
+        display: inline;
+        &:before {
+          bottom: 0;
+        }
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+    
   }
   &.show {
     & .sub-menu {
-      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0,0);
     }
   }
 }
@@ -183,16 +194,14 @@ body {
 .nav-btn {
   display: inline;
   position: absolute;
-  right: -40px;
-  top: calc(50% - 9px);
-  background: transparent;
+  right: -30px;
+  top: calc(50% - 8px);
+  background: 0 0;
   border: none;
-  outline: none;
-  // display: none;
+  outline: 0;
   cursor: pointer;
   & i:before {
-    font-size: 16px;
-    color: $greyColor;
+    font-size: 10px;
   }
   @media (max-width: $breakpoint-lg){
     display: inline;
