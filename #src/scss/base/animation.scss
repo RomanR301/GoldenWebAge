@@ -76,21 +76,69 @@
 }
 
 
-// image reveal
-.info-block__image, .cases__item_image {
+
+// ===================Semi Donut Chart model-1========================
+
+.semi-donut{
+  --percentage: 0;
+  --fill: #ff0;
+  margin-left: 6px;
+  transform: scale(.6);
+  width: 300px;
+  height: 150px;
   position: relative;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
   overflow: hidden;
-  & .overlay {
+  color: var(--fill);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing : border-box;
+  &:after{
+    content: '';
+    width: 300px;
+    height: 300px;
+    border: 50px solid;
+    border-color : rgba(0,0,0,0.15) rgba(0,0,0,0.15) var(--fill) var(--fill);
     position: absolute;
+    border-radius: 50%;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background: $purpleColor;
-    @media (max-width: $breakpoint-lg) {
-      display: none;
+    box-sizing : border-box;
+    transform: rotate( calc( 1deg * ( -45 + var(--percentage) * 1.7 ) ) );
+    animation : fillAnimation 1s ease-in;
+  }
+  & span:first-child {
+    position: absolute;
+    bottom: 25px;
+    font-size: 24px;
+    font-weight: 700;
+    transform: scale(1.6);
+    &:after {
+      content: '%';
     }
+  }
+  & span:last-child {
+    position: absolute;
+    font-size: 12.061px;
+    line-height: 15px;
+    color: #9D9D9D;
+    transform: scale(1.6);
+    bottom: 6px;
   }
 }
 
+
+
+@keyframes fillAnimation{
+  0%{transform : rotate(-45deg);}
+  50%{transform: rotate(135deg);}
+}
+
+@keyframes fillGraphAnimation{
+  0%{transform: rotate(0deg);}
+  50%{transform: rotate(180deg);}
+}
 

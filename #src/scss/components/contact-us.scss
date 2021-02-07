@@ -1,0 +1,29 @@
+.callback-banner {
+  padding: 65px;
+  background: $goldenColor;
+  position: relative;
+  margin-bottom: 60px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    background: url('../../img/thick-lines-white.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 50%;
+    width: 70%;
+    height: 100%;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: $whiteColor;
+  }
+}

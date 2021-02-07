@@ -4,6 +4,16 @@ let front = {
   $body: $('body'),
   init: function () {
       this.events();
+      var swiper = new Swiper('.clients-carousel', {
+        slidesPerView: 'auto',
+        loop: true,
+        // spaceBetween: 100,
+        centeredSlides: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
   },
   toggleNav: function () {
     if (!this.hamburger.hasClass('open')) {
@@ -187,3 +197,15 @@ $(window).scroll(function () {
         $('.header').removeClass("scroll-header");
     }
   });
+
+$('.perfomance__total').each(function () {
+  var $this = $(this);
+  jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+    duration: 1000,
+    easing: 'swing',
+    step: function () {
+      $this.text(Math.ceil(this.Counter));
+    }
+    
+  });
+});

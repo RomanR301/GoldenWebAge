@@ -7,7 +7,7 @@
 @import "./base/base.scss";
 @import "./base/reset.scss";
 @import "./base/typography.scss";
-// @import "./base/animation.scss";
+@import "./base/animation.scss";
 
 // ui-kit
 // @import "./ui-kit/breadkrumb/_breadkrumb.scss";
@@ -27,6 +27,7 @@
 // components
 
 @import "./components/buttons.scss";
+@import "./components/contact-us.scss";
 // @import "./components/entry-content.scss";
 // @import "./components/forms.scss";
 // @import "./components/other.scss";
@@ -38,7 +39,7 @@
 @import "./layout/footer.scss";
 
 // Vendor
-// @import "./vendor/swiper.scss";
+@import "./vendor/swiper.scss";
 
 
 // pages 

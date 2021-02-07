@@ -9,6 +9,7 @@
   line-height: 30px;
   border: 2px solid transparent;
   border-radius: 8px;
+  cursor: pointer;
   @include transition(.3);
   &-primary {
     background: $goldenColor;
@@ -20,6 +21,38 @@
     }
   }
   &-secondary {
-    
+    background: #FFFFFF;
+    border-radius: 20px;
+    color: $goldenColor;
+    font-weight: 700;
+    border-color: $whiteColor;
+    &:hover {
+      background: $goldenColor;
+      color: $whiteColor;
+    }
+  }
+}
+
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  color: $goldenColor;
+  font-weight: 700;
+  @include transition(.3);
+  position: relative;
+  &:after {
+    font-family: 'icomoon';
+    content: "\e902";
+    color: #d4b982;
+    margin-left: 20px;
+    font-size: 16px;
+    @include transition(.3);
+  }
+  &:hover {
+    color: $goldenColor2;
+    &:after {
+      transform: translate(10px,0);
+      color: $goldenColor2;
+    }
   }
 }

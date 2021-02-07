@@ -14,6 +14,9 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+    & img {
+      height: 100%;
+    }
   }
   &__text {
     height: 100%;
@@ -39,10 +42,16 @@
     position: relative;
     height: 100%;
     display: flex;
-    align-items: center;
-    & img {
+    align-items: center;  
+    & .main-screen-phone {
       @include defaultIcon(contain);
-      object-position: 0 80%;
+      object-position: 0 70%;
+    }
+    & .main-screen-circle {
+      position: absolute;
+      right: 14%;
+      top: 140px;
+      z-index: -2;
     }
   }
 }
@@ -50,20 +59,66 @@
 .frame {
   position: absolute;
   padding: 30px 26px;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+  z-index: 20;
+  &__difference {
+    color: #00CE98;
+  }
+  &__title {
+    font-weight: 500;
+  }
+  &__number {
+    font-size: 25px;
+    line-height: 29px;
+    color: #1D1D1D;
+    font-weight: 700;
+  }
   &__search {
-    top: 15%;
-    left: 12%;
+    bottom: 68%;
+    left: 4%;
+    width: 380px;
+    height: 180px;
+    background-image: url('../../img/main-screen-graph.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 150px;
+    background-position: bottom 30px right 30px;
+    & .frame__data {
+      display: flex;
+      flex-direction: column;
+      margin-right: 22px;
+    }
+    & .frame__title {
+      margin-bottom: 20px;
+    }
   }
   &__conversion {
-    right: 0;
-    bottom: 0;
+    right: -1%;
+    bottom: 11%;
+    height: 320px;
+    width: 290px;
+    background: url('../../img/main-screen-charts.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    & .frame__title {
+      margin-bottom: 10px;
+    }
   }
   &__perfomance {
-    left: 0;
-    bottom: 0;
+    width: 290px;
+    height: 270px;
+    left: -16%;
+    bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+    & .frame__title {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -106,6 +161,322 @@
   }
 }
 
-.recent {
+.projects {
   margin-bottom: 150px;
+  &-list {
+    margin-top: -45px;
+  }
+  &-item {
+    &__image {
+      margin-bottom: 60px;
+      & img {
+        @include defaultIcon(contain);
+      }
+    }
+    &__title {
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    &__services {
+      margin-bottom: 10px;
+      color: $lightGrey;
+    }
+    &__technologies {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      & li {
+        color: $lightGrey;
+        display: flex;
+        align-items: center;
+        &:after {
+          content: '';
+          display: block;
+          width: 6px;
+          height: 6px;
+          background: $lightGrey;
+          border-radius: 100%;
+          margin: 0 12px;
+        }
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+    &__description {
+      margin-bottom: 20px;
+    }
+    & .arrow-link {
+      margin-top: 20px;
+    }
+  }
+}
+
+.services {
+  margin-bottom: 160px;
+  & .section-title {
+    margin-right: 80px;
+  }
+  &-list {
+    margin-top: 50px;
+  }
+  &-inner-container {
+
+  }
+  &-item {
+    background: #FFFFFF;
+    border-radius: 30px;
+    @include transition(.3);
+    padding: 56px 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:hover {
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    }
+    &__image {
+      height: 100px;
+      margin-bottom: 40px;
+      & img {
+        @include defaultIcon(contain);
+        width: fit-content;
+      }
+    }
+    &__title {
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+    &__description {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.why-us {
+  margin-bottom: 150px;
+  position: relative;
+  &-inner {
+    display: flex;
+  }
+  &__image {
+    z-index: -1;
+    width: 62%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    & img {
+      @include defaultIcon(contain);
+    }
+  }
+  &__quote {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 40px 140px 12px 50px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+    &:before {
+      content: '';
+      background-image: url('../../img/blockquote.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 137px;
+      height: 90px;
+      position: absolute;
+      left: 0;
+      top: 0px;
+    }
+    & p {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: $defaultText;
+    } 
+    & cite {
+      color: #333333;
+    }
+    & img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 160px;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__text {
+    width: 38%;
+    & .section-title {
+      margin-bottom: 25px;
+    }
+    & .section-title, & .section-title span {
+      white-space: nowrap;
+    }
+  }
+}
+
+.clients {
+  margin: 120px 0 70px 0;
+  & .section-title {
+    margin-right: 80px;
+  }
+  &-google {
+    padding: 20px 30px 20px 30px;
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 470px;
+    height: 120px;
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    &__image {
+      display: flex;
+      margin-right: 18px;
+      width: 120px;
+      & img {
+        @include defaultIcon(contain);
+      }
+    }
+    &__title {
+      font-weight: 500;
+    }
+    &__rating {
+      display: flex;
+      align-items: center;
+      &_number {
+        margin-right: 12px;
+      }
+      &_stars {
+        & i {
+          margin-right: 3px;
+        }
+      }
+    }
+    &__more {
+      position: absolute;
+      background: #D4B982;
+      right: 0;
+      bottom: 0;
+      color: #fff;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      & i {
+        @include transition(.3);
+        margin-left: 20px;
+        &:before {
+          color: $whiteColor;
+          font-size: 16px;
+        }
+      }
+      &:hover {
+        & i {
+          transform: translate(10px, 0);
+        }
+      }
+    }
+  }
+}
+
+.clients {
+  &-carousel {
+    & .clients {
+      &__author {
+        width: 125px;
+        height: 125px;
+        border-radius: 100%;
+        border: 10px solid $goldenColor;
+        margin-bottom: 10px;
+        & img {
+          @include defaultIcon(contain);
+        }
+        &_name {
+          margin-bottom: 10px;
+          font-weight: 600;
+        }
+      }
+      &__google {
+        &_icon {
+          width: 80px;
+          & img {
+            @include defaultIcon(contain);
+          }
+        }
+        &_rating {
+          font-weight: 600;
+          margin-bottom: 2px;
+        }
+        &_stars {
+          font-size: 20px;
+        }
+      }
+    }
+    &-container {
+      margin-top: 100px;
+      position: relative;
+      &:before,&:after {
+        content: '';
+        width: 20px;
+        height: 100%;
+        background: $goldenColor;
+        position: absolute;
+        z-index: 2;
+      }
+      &:before {
+        left: -20px;
+      }
+      &:after {
+        right: -20px;
+      }
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .swiper-slide {
+      width: 33.33%;
+      text-align: center;
+      font-size: 18px;
+      opacity: 0.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: scale(.7);
+      transition:all 100ms linear;
+      &.swiper-slide-active {
+        width: 33.33%;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.clients-logos {
+  background: #F4F4F4;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 20%;
+    & img {
+      @include defaultIcon(contain);
+      width: 90%;
+      margin: auto;
+    }
+  }
 }
