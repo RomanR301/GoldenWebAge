@@ -30,6 +30,9 @@
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
   margin: 0 20px;
+  @media (max-width: $breakpoint-xl) {
+    margin: 0 15px;
+  }
 }
 
 .d-flex {

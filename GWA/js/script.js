@@ -1,13 +1,13 @@
 let front = {
   hamburger: $('.hamburger'),
   nav: $('.navbar'),
+  subNav: $('.menu-item-has-child'),
   $body: $('body'),
   init: function () {
       this.events();
       var swiper = new Swiper('.clients-carousel', {
         slidesPerView: 'auto',
         loop: true,
-        // spaceBetween: 100,
         centeredSlides: true,
         navigation: {
           nextEl: '.swiper-button-next',
@@ -20,10 +20,16 @@ let front = {
         this.hamburger.addClass('open');
         this.nav.toggleClass('active');
         this.$body.addClass('active')
+        this.subNav.removeClass('show');
+        this.subNav.find('p').remove();
+        this.subNav.find('span').remove();
         } else {
             this.hamburger.removeClass('open');
             this.nav.toggleClass('active');
-            this.$body.removeClass('active')
+            this.$body.removeClass('active');
+            this.subNav.removeClass('show');
+            this.subNav.find('p').remove();
+            this.subNav.find('span').remove();
         }
     },
 
@@ -125,7 +131,7 @@ let modal = {
 
 
 
-      if (window.matchMedia("(min-width: 992px)").matches) {
+      if (window.matchMedia("(min-width: 1200px)").matches) {
         $(document).on('click', '.nav-btn', function (e) {
             $('.menu-item-has-child').toggleClass('show');
         });
@@ -144,25 +150,21 @@ let modal = {
             navTitle.className = "nav-title";        
             navBack.className = "prev-page"
             navBack.innerHTML = '<i class="icon-arrow-big"></i>Назад';
-            navTitle.innerHTML = $(this).parent().text();
-            $(this).parent().next().append(navBack);
-            $(this).parent().next('.sub-menu').prepend(navTitle);
-            if (!$(this).parent().next('.sub-menu').hasClass('menuOpen')) {
-                $(this).parent().next('.sub-menu').addClass('menuOpen');
-                $(this).parent().parent().addClass('show');
-            } else {
-                $(this).parent().next('.sub-menu').removeClass("menuOpen");
-            }
+            navTitle.innerHTML = $(this).prev().text();
+            $(this).next().prepend(navBack);
+            $(this).next('.sub-menu').prepend(navTitle);
+            $('.menu-item-has-child').toggleClass('show');
         });
         
         
         $(document).on('click', '.prev-page', function (e) {
             e.preventDefault();
-            if ($(this).parent().hasClass('menuOpen')) {
-                $(this).parent().removeClass("menuOpen");
+            if ($(this).parent().parent().hasClass('show')) {
+                $(this).parent().parent().removeClass("show");
                 $(this).parent().find('p').remove();
                 $(this).parent().find('span').remove();
-                $(this).parent().parent().removeClass('show');
+            } else {
+              null
             }
         });
       }

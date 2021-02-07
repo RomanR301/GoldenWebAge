@@ -14,6 +14,9 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+    @media (max-width: $breakpoint-xl) {
+      display: none;
+    }
     & img {
       height: 100%;
     }
@@ -50,8 +53,11 @@
     & .main-screen-circle {
       position: absolute;
       right: 14%;
-      top: 140px;
+      top: 14%;
       z-index: -2;
+      @media (min-width: 2000px) {
+        top: 24%;
+      }
     }
   }
 }
@@ -76,15 +82,24 @@
     font-weight: 700;
   }
   &__search {
-    bottom: 68%;
+    top: 12%;
     left: 4%;
     width: 380px;
     height: 180px;
-    background-image: url('../../img/main-screen-graph.svg');
+    background-image: url('../img/main-screen-graph.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-size: 150px;
     background-position: bottom 30px right 30px;
+    @media (min-width: 1800px) {
+      top: 15%;
+    }
+    @media (min-width: 2000px) {
+      top: 20%;
+    }
+    @media (min-width: 2200px) {
+      top: 24%;
+    }
     & .frame__data {
       display: flex;
       flex-direction: column;
@@ -99,7 +114,7 @@
     bottom: 11%;
     height: 320px;
     width: 290px;
-    background: url('../../img/main-screen-charts.svg');
+    background: url('../img/main-screen-charts.svg');
     background-repeat: no-repeat;
     background-size: contain;
     & .frame__title {
@@ -131,9 +146,10 @@
   &:before {
     content: '';
     position: absolute;
-    background: url('../../img/thick-lines-white.svg');
+    background: url('../img/thick-lines-white.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    pointer-events: none;
     left: 0;
     top: 0;
     width: 100%;

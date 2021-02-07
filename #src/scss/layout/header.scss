@@ -18,32 +18,54 @@
       margin: 0 -20px;
     }
   }
+  @media (max-width: $breakpoint-xl) {
+    padding: 6px 0;
+  }
   &.scroll-header {
     top: 0;
     padding: 20px;
     background: $whiteColor;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    @media (max-width: $breakpoint-xl) {
+      padding: 6px 0;
+    }
   }
   &-logo {
     display: flex;
+    z-index: 22;
+    @media (max-width: 1600px) {
+      width: 140px;
+    }
+    & img {
+      @include defaultIcon(contain);
+    }
+  }
+  &-cta {
+    @media (max-width: $breakpoint-xl) {
+      margin: 0 10px 0 auto;
+    }
   }
 }
 
 .navbar {
   @include transition(.3);
   margin-left: auto;
-  @media (max-width: $breakpoint-lg) {
+  @media (max-width: $breakpoint-xl) {
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     right: -120vw;
+    background-color: $whiteColor;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    padding: 90px 30px 0 30px;
     @include transition(.3);
-    padding: 10px;
+    background-image: url('../../img/thick-lines-golden-header.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   &.active {
     right: 0;
@@ -51,14 +73,23 @@
 }
 .menu {
   display: flex;
-  @media (max-width: $breakpoint-lg) {
+  @media (max-width: $breakpoint-xl) {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
   &-item {
     margin-right: 66px;
+    @media (max-width: 1600px) {
+      margin-right: 40px;
+    }
+    @media (max-width: 1400px) {
+      margin-right: 35px;
+    }
+    @media (max-width: $breakpoint-xl) {
+      margin: 0 0 15px 0;
+    }
     & a {
       color: $greyColor;
       display: block;
@@ -66,11 +97,12 @@
       position: relative;
       overflow: hidden;
       @media (max-width: 1400px) {
-        font-size: 16px;
+        font-size: 18px;
       }
-      @media (max-width: $breakpoint-lg) {
-        font-size: 30px;
+      @media (max-width: $breakpoint-xl) {
+        font-size: 40px;
         font-weight: 900;
+        line-height: 1.3;
       }
       &:before {
         content: '';
@@ -94,6 +126,13 @@
 
 .menu-item-has-child {
   position: relative;
+  margin-right: 84px;
+  @media (max-width: 1600px) {
+    margin-right: 60px;
+  }
+  @media (max-width: 1400px) {
+    margin-right: 55px;
+  }
   & .sub-menu {
     position: absolute;
     left: 0;
@@ -107,6 +146,17 @@
     visibility: hidden;
     transform: translate(0, -20px);
     @include transition(.3);
+    @media (max-width: $breakpoint-xl) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: unset;
+      z-index: 99;
+      padding: 90px 30px 0 30px;
+      transition: unset;
+    }
     & .menu-item {
       margin: 0 0 10px 0;
       line-height: 1.5;
@@ -135,17 +185,17 @@
   display: none;
   width: 45px;
   height: 45px;
-  margin-right: -15px;
   position: relative;
   z-index: 22;
-  @media (max-width: $breakpoint-lg) {
+  cursor: pointer;
+  @media (max-width: $breakpoint-xl) {
     display: block;
   } 
   & span {
     position: absolute;
-    right: 15px;
+    right: 0;
     display: block;
-    width: 25px;
+    width: 30px;
     background: $goldenColor;
     height: 3px;
     border-radius: 10px;
@@ -164,9 +214,6 @@
     top: calc(50% + 3.5px);
   }
   &.open {
-    & span {
-      background: $whiteColor;
-    }
     & span:nth-child(1) {
       top: calc(50% - 2.5px);
       width: 0%;
@@ -188,6 +235,17 @@
 
 .navbar-contacts {
   display: none;
+  @media (max-width: $breakpoint-xl) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    & p {
+      margin-bottom: 0;
+    }
+  }
+  &__btn {
+    margin-bottom: 40px;
+  }
 }
 
 
@@ -203,8 +261,13 @@
   & i:before {
     font-size: 10px;
   }
-  @media (max-width: $breakpoint-lg){
-    display: inline;
+  @media (max-width: $breakpoint-xl){
+    display: block;
+    transform: rotate(-90deg);
+    right: -70px;
+    & i:before {
+      font-size: 20px;
+    }
   }
 }
 

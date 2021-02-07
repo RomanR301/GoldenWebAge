@@ -38,6 +38,9 @@ body {
   font-size: 20px;
   line-height: 1.8;
   border: 20px solid $goldenColor;
+  @media (max-width: $breakpoint-xl) {
+    border: none;
+  }
 }
 
 .no-focus-outline a:focus,
