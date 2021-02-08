@@ -103,10 +103,10 @@
   border-radius: 20px;
   z-index: 20;
   @media (max-width: $breakpoint-lg) {
-    transform: scale(.7);
+    transform: scale(.7)!important;
   }
   @media (max-width: $breakpoint-md) {
-    transform: scale(.5);
+    transform: scale(.5)!important;
   }
   &__difference {
     color: #00CE98;
@@ -244,8 +244,10 @@
       font-weight: 900;
       @include fontSize(25, 45);
       line-height: 1.4;
+      display: block;
     }
     & .golden2 {
+      display: block;
       color: $goldenColor2;
       font-weight: 700;
       @include fontSize(40, 130);
@@ -452,7 +454,7 @@
     }
     &:before {
       content: '';
-      background-image: url('../../img/blockquote.svg');
+      background-image: url('../img/blockquote.svg');
       background-size: contain;
       background-repeat: no-repeat;
       width: 137px;
