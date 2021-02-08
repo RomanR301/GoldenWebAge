@@ -2,32 +2,95 @@
 @import "../abstracts/variables";
 
 .form-control {
-  height: 54px;
-  margin-bottom: 24px;
+  height: 64px;
+  margin-bottom: 20px;
   &.form-textarea {
     height: 160px;
   }
   &.form-submit {
     margin: 0;
   }
+  &.form-checkbox {
+    height: auto;
+    & label {
+      color: $greyColor;
+    }
+    & strong {
+      color: $greyColor;
+    }
+  }
+  &.form-submit {
+    & .btn {
+      border-radius: 20px;
+      outline: none;
+    }
+  }
   & input, & textarea {
     font-family: inherit;
     font-size: inherit;
+    color: inherit;
     resize: none;
     width: 100%;
     height: 100%;
-    border: 2px solid $whiteColor;
+    border: 2px solid $goldenColor;
     background: transparent;
-    color: $whiteColor;
-    font-size: 16px;
+    color: $greyColor;
+    border-radius: 20px;
+    font-size: 20px;
     line-height: 24px;
     padding: 16px 24px;
     &::placeholder  {
-      color: $whiteColor;
+      color: $greyColor;
     }
     &::-moz-placeholder {
-      color: $whiteColor;
+      color: $greyColor;
+    }
+    &:focus {
+      outline:none;
     }
   }
 }
 
+/*Checkboxes styles*/
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  color: #ddd;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #D4B982;
+  position: absolute;
+  border-radius: 4px;
+  left: 0;
+  top: 8px;
+  opacity: 1;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: 3px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

@@ -80,7 +80,7 @@
             <p>E-Mail: <a href="mailto:info@goldenwebage.de">info@goldenwebage.de</a></p>
           </div>
         </div>
-        <div class="header-cta btn btn-primary">Contact Us</div>
+        <div class="header-cta btn btn-primary modalTrigger" data-modal="#callbackModal">Write Us</div>
         <div class="hamburger">
           <span></span>
           <span></span>
@@ -179,6 +179,40 @@
     </div>
   </div>
 </footer>
+
+
+
+<div class="modal modal-callback" id="callbackModal">
+  <div class="modal__body">
+    <div class="modal__content">
+      <div class="modal__close">
+
+      </div>
+      <div class="modal__heading">Contact Us</div>
+      <div class="modal__form">
+        <form action="">
+          <div class="form-control">
+            <input type="text" name="callback_email" placeholder="Name" required>
+          </div>
+          <div class="form-control">
+            <input type="email" name="callback_email" placeholder="Email" required>
+          </div>
+          <div class="form-control form-textarea">
+            <textarea name="callback_message" placeholder="Message" required></textarea>
+          </div>
+          <div class="form-control form-checkbox">
+            <input type="checkbox" id="modal-checkbox">
+            <label for="modal-checkbox">Ich habe die <strong>Datenschutzerklärung</strong> zur Kenntnis genommen. Ich stimme zu, dass meine
+              Angaben zur Beantwortung meiner Anfrage erhoben und gespeichert werden.</label>
+          </div>
+          <div class="form-control form-submit">
+            <button class="btn btn-primary">Please contact me</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="js/libs.min.js"></script>
