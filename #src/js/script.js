@@ -108,15 +108,14 @@ let modal = {
       let modalWindow = $(id);
       modalWindow.fadeIn();
       modalWindow.find('.modal__content').removeClass('animate-away').addClass('animate-in');
-
-      // $('body, html').addClass('active');
+      $('body, html').addClass('active');
   },
 
   closeModal: function (id) {
       let modalWindow = $(id);
       modalWindow.find('.modal__content').removeClass('animate-in').addClass('animate-away');
       modalWindow.fadeOut();
-      // $('body, html').removeClass('active');
+      $('body, html').removeClass('active');
   },
 
   events: function () {
