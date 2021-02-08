@@ -164,6 +164,10 @@
   @media (max-width: 1400px) {
     margin-right: 55px;
   }
+  @media (max-width: $breakpoint-xl) {
+    display: flex;
+    align-items: center;
+  }
   & .sub-menu {
     position: absolute;
     left: 0;
@@ -306,8 +310,10 @@
   }
   @media (max-width: $breakpoint-xl){
     display: block;
+    position: static;
     transform: rotate(-90deg);
-    right: -70px;
+    // right: -70px;
+    margin-left: 20px;
     & i:before {
       font-size: 20px;
     }

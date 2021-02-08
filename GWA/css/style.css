@@ -1588,6 +1588,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   left: 0;
   z-index: 2050;
   outline: 0;
+  display: none;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-overflow-scrolling: touch;
@@ -4303,6 +4304,11 @@ button.swiper-pagination-bullet {
     color: #D4B982;
   }
 
+  .menu-item-has-child {
+    display: flex;
+    align-items: center;
+  }
+
   .menu-item-has-child .sub-menu {
     position: fixed;
     width: 100%;
@@ -4341,8 +4347,9 @@ button.swiper-pagination-bullet {
 
   .nav-btn {
     display: block;
+    position: static;
     transform: rotate(-90deg);
-    right: -70px;
+    margin-left: 20px;
   }
 
   .nav-btn i:before {
