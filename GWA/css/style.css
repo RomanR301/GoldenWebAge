@@ -3098,9 +3098,6 @@ button.swiper-pagination-bullet {
   color: #B89B61;
   font-weight: 700;
   font-size: 130px;
-  font-size: -webkit-calc(40px + (130 - 40) * ((100vw - 300px) / (1900 - 300)));
-  font-size: -moz-calc(40px + (130 - 40) * ((100vw - 300px) / (1900 - 300)));
-  font-size: calc(40px + (130 - 40) * ((100vw - 300px) / (1900 - 300)));
   line-height: 1;
 }
 
@@ -3962,6 +3959,10 @@ button.swiper-pagination-bullet {
     background-size: cover;
   }
 
+  .we-provide__title .golden2 {
+    font-size: 90px;
+  }
+
   .we-provide__description {
     margin: 0 0 0 20px;
   }
@@ -4196,6 +4197,10 @@ button.swiper-pagination-bullet {
     top: 5%;
   }
 
+  .we-provide__title .golden2 {
+    font-size: 70px;
+  }
+
   .services-list {
     margin: 50px 15px 0 15px;
   }
@@ -4385,6 +4390,10 @@ button.swiper-pagination-bullet {
     right: 20%;
   }
 
+  .hero-screen {
+    margin-bottom: 24px;
+  }
+
   .hero-screen__subtitle {
     font-size: 25px;
   }
@@ -4422,6 +4431,10 @@ button.swiper-pagination-bullet {
   .frame__perfomance {
     left: -80px;
     top: -70px;
+  }
+
+  .we-provide__title .golden2 {
+    font-size: 50px;
   }
 
   .projects-list {

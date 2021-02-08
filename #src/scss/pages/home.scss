@@ -8,6 +8,9 @@
     height: auto;
     padding-top: 20px;
   }
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 24px;
+  }
   & .container, & .row, & .col-xs-12 {
     height: 100%;
   }
@@ -243,6 +246,7 @@
       color: $greyColor;
       font-weight: 900;
       @include fontSize(25, 45);
+      // font-size: 130px;
       line-height: 1.4;
       display: block;
     }
@@ -250,8 +254,17 @@
       display: block;
       color: $goldenColor2;
       font-weight: 700;
-      @include fontSize(40, 130);
+      font-size: 130px;
       line-height: 1;
+      @media (max-width: 1600px) {
+        font-size: 90px;
+      }
+      @media (max-width: $breakpoint-xl) {
+        font-size: 70px;
+      }
+      @media (max-width: $breakpoint-md) {
+        font-size: 50px;
+      }
       &:last-child {
         margin-left: 50px;
         @media (max-width: $breakpoint-lg) {
