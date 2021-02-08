@@ -3,6 +3,9 @@
 
 .footer {
   padding: 100px 0 30px 0;
+  @media (max-width: $breakpoint-xl) {
+    padding: 20px 0 30px 0;
+  }
   & p {
     margin-bottom: 2px;
   }
@@ -31,26 +34,72 @@
   &-logo {
     display: flex;
     margin-bottom: 20px;
+    @media (max-width: $breakpoint-md) {
+      justify-content: center;
+    }
     &:before {
       display: none;
     }
   }
   &-copyright {
     margin-top: 85px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $breakpoint-xl) {
+      margin: 50px 15px 0 15px;
+    }
+    & .second-row {
+      font-weight: 500;
+      color: $goldenColor;
+    }
   }
   &-description {
     width: 28%;
     margin-top: -25px;
     padding-right: 100px;
+    @media (max-width: $breakpoint-xl) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      text-align: center;
+    }
   }
   &-menu {
     width: 15%;
+    @media (max-width: $breakpoint-xl) {
+      width: 25%;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
   }
   &-menu2 {
     width: 22%;
+    @media (max-width: $breakpoint-xl) {
+      width: 25%;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
   }
   &-contact {
     width: 35%;
+    @media (max-width: $breakpoint-xl) {
+      width: 50%;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      text-align: center;
+    }
     & a {
       color: $goldenColor;
       font-weight: 700;
@@ -67,4 +116,9 @@
       margin-bottom: 10px;
     }
   }
+}
+
+.footer-email a {
+  color: $defaultText;
+  font-weight: 400;
 }

@@ -4,7 +4,11 @@
 .hero-screen {
   height: calc(100vh - 20px);
   position: relative;
-  & .container, & .row, & .col-md-6 {
+  @media (max-width: $breakpoint-xl) {
+    height: auto;
+    padding-top: 20px;
+  }
+  & .container, & .row, & .col-xs-12 {
     height: 100%;
   }
   &__bg {
@@ -37,18 +41,44 @@
     @media (max-width: $breakpoint-xxl) {
       white-space: unset;
     }
+    @media (max-width: $breakpoint-xl) {
+      font-size: 40px;
+    }
+    @media (max-width: $breakpoint-md) {
+      font-size: 25px;
+    }
   }
   &__description {
     width: 63%;
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
   }
   &__image {
     position: relative;
     height: 100%;
     display: flex;
     align-items: center;  
+    @media (max-width: $breakpoint-xl) {
+      padding: 120px 0 150px 0;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 320px;
+      margin: 0 auto;
+      padding: 90px 0 120px 0;
+    }
     & .main-screen-phone {
       @include defaultIcon(contain);
       object-position: 0 70%;
+      @media (max-width: $breakpoint-xl) {
+        width: 500px;
+        margin: 0 auto;
+        object-position: unset;
+      }
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+        
+      }
     }
     & .main-screen-circle {
       position: absolute;
@@ -57,6 +87,9 @@
       z-index: -2;
       @media (min-width: 2000px) {
         top: 24%;
+      }
+      @media (max-width: $breakpoint-xl) {
+        display: none;
       }
     }
   }
@@ -69,6 +102,12 @@
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   z-index: 20;
+  @media (max-width: $breakpoint-lg) {
+    transform: scale(.7);
+  }
+  @media (max-width: $breakpoint-md) {
+    transform: scale(.5);
+  }
   &__difference {
     color: #00CE98;
   }
@@ -100,6 +139,16 @@
     @media (min-width: 2200px) {
       top: 24%;
     }
+    @media (max-width: $breakpoint-xl) {
+      top: 0%;
+      right: 0%;
+      left: unset;
+    }
+    @media (max-width: $breakpoint-md) {
+      right: -98px;
+      top: -30px;
+      width: 360px;
+    }
     & .frame__data {
       display: flex;
       flex-direction: column;
@@ -117,6 +166,15 @@
     background: url('../img/main-screen-charts.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    @media (max-width: $breakpoint-xl) {
+      left: 60%;
+      bottom: 5%;
+    }
+    @media (max-width: $breakpoint-md) {
+      bottom: -30px;
+      right: 20px;
+      left: unset;
+    }
     & .frame__title {
       margin-bottom: 10px;
     }
@@ -131,6 +189,17 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 0;
+    @media (max-width: $breakpoint-xl) {
+      left: 5%;
+      top: 5%;
+    }
+    @media (max-width: $breakpoint-lg) {
+      left: 0;
+    }
+    @media (max-width: $breakpoint-md) {
+      left: -80px;
+      top: -70px;
+    }
     & .frame__title {
       margin-bottom: 10px;
     }
@@ -143,6 +212,10 @@
   padding: 78px 0 100px 0;
   position: relative;
   margin-bottom: 150px;
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 60px;
+  }
+  z-index: 1;
   &:before {
     content: '';
     position: absolute;
@@ -154,35 +227,61 @@
     top: 0;
     width: 100%;
     height: 100%;
+    z-index: -1;
+    @media (max-width: 1600px) {
+      background-size: cover;
+    }
+    @media (max-width: $breakpoint-sm) {
+      height: 30%;
+    }
+  }
+  @media (max-width: $breakpoint-lg) {
+    padding: 60px 0;
   }
   &__title {
     & .small {
       color: $greyColor;
       font-weight: 900;
-      font-size: 45px;
+      @include fontSize(25, 45);
       line-height: 1.4;
     }
     & .golden2 {
       color: $goldenColor2;
       font-weight: 700;
-      font-size: 130px;
+      @include fontSize(40, 130);
       line-height: 1;
       &:last-child {
         margin-left: 50px;
+        @media (max-width: $breakpoint-lg) {
+          margin-left: 25px;
+        }
       }
     }
   }
   &__description {
     margin-right: 40px;
+    @media (max-width: 1600px) {
+      margin: 0 0 0 20px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      margin: 30px 0 0 0;
+    }
   }
 }
 
 .projects {
   margin-bottom: 150px;
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 60px;
+  }
   &-list {
     margin-top: -45px;
+    @media (max-width: $breakpoint-md) {
+      margin: -35px 15px 0 15px;
+    }
   }
   &-item {
+    margin-bottom: 30px;
     &__image {
       margin-bottom: 60px;
       & img {
@@ -201,10 +300,17 @@
       margin-bottom: 20px;
       display: flex;
       flex-wrap: wrap;
+      @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+      }
       & li {
         color: $lightGrey;
         display: flex;
         align-items: center;
+        @media (max-width: $breakpoint-md) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
         &:after {
           content: '';
           display: block;
@@ -213,6 +319,9 @@
           background: $lightGrey;
           border-radius: 100%;
           margin: 0 12px;
+          @media (max-width: $breakpoint-md) {
+            margin: 15px 0;
+          }
         }
         &:last-child {
           &:after {
@@ -232,14 +341,29 @@
 
 .services {
   margin-bottom: 160px;
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 60px;
+  }
   & .section-title {
     margin-right: 80px;
+    @media (max-width: $breakpoint-lg) {
+      margin: 0 0 20px 0;
+      width: 100%;
+    }
   }
   &-list {
     margin-top: 50px;
+    @media (max-width: $breakpoint-xl) {
+      margin: 50px 15px 0 15px;
+    }
   }
-  &-inner-container {
-
+  & .col-xs-12 {
+    margin-bottom: 30px;
+    @media (max-width: $breakpoint-xl) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   &-item {
     background: #FFFFFF;
@@ -250,6 +374,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: $breakpoint-lg) {
+      padding: 25px 15px;
+    }
     &:hover {
       box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
     }
@@ -274,8 +401,14 @@
 .why-us {
   margin-bottom: 150px;
   position: relative;
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 60px;
+  }
   &-inner {
     display: flex;
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+    }
   }
   &__image {
     z-index: -1;
@@ -284,6 +417,24 @@
     right: 0;
     top: 0;
     height: 100%;
+    @media (max-width: 1600px){
+      width: 52%;
+    }
+    @media (max-width: $breakpoint-lg){
+      width: 400px;
+      margin: auto;
+      position: static
+    }
+    @media (max-width: $breakpoint-md) {
+      height: 400px;
+      margin: 0;
+      width: calc(100% + 30px);
+      margin: 0 -15px;
+      & img {
+        object-fit: cover;
+        object-position: 30% 0%;
+      }
+    }
     & img {
       @include defaultIcon(contain);
     }
@@ -296,6 +447,9 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 25px;
+    @media (max-width: $breakpoint-md) {
+      padding: 40px 115px 15px 15px;
+    }
     &:before {
       content: '';
       background-image: url('../../img/blockquote.svg');
@@ -319,18 +473,33 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      width: 160px;
+      width: 100%;
+      pointer-events: none;
       height: 100%;
+      object-position: right;
       object-fit: contain;
+      @media (max-width: $breakpoint-md) {
+        width: 30%;
+        object-position: bottom right;
+      }
     }
   }
   &__text {
     width: 38%;
+    @media (max-width: 1600px) {
+      width: 48%;
+    }
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+    }
     & .section-title {
       margin-bottom: 25px;
     }
     & .section-title, & .section-title span {
       white-space: nowrap;
+      @media (max-width: $breakpoint-md) {
+        white-space: unset;
+      }
     }
   }
 }
@@ -339,6 +508,10 @@
   margin: 120px 0 70px 0;
   & .section-title {
     margin-right: 80px;
+    @media (max-width: 1400px) {
+      width: 100%;
+      margin: 0 0 30px 0;
+    }
   }
   &-google {
     padding: 20px 30px 20px 30px;
@@ -349,10 +522,21 @@
     overflow: hidden;
     width: 470px;
     height: 120px;
+    @media (max-width: $breakpoint-lg) {
+      padding: 20px 14px 40px 14px;
+      height: auto;
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+    }
     &__header {
       display: flex;
       align-items: center;
       margin-bottom: 10px;
+      @media (max-width: $breakpoint-lg) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
     &__image {
       display: flex;
@@ -388,6 +572,9 @@
       align-items: center;
       justify-content: center;
       font-weight: 700;
+      @media (max-width: $breakpoint-lg) {
+        width: 100%;
+      }
       & i {
         @include transition(.3);
         margin-left: 20px;
@@ -437,10 +624,18 @@
           font-size: 20px;
         }
       }
+      &__text {
+        @media (max-width: $breakpoint-xl) {
+          padding: 0 15px;
+        }
+      }
     }
     &-container {
       margin-top: 100px;
       position: relative;
+      @media (max-width: $breakpoint-lg) {
+        margin-top: 30px;
+      }
       &:before,&:after {
         content: '';
         width: 20px;
@@ -448,6 +643,9 @@
         background: $goldenColor;
         position: absolute;
         z-index: 2;
+        @media (max-width: $breakpoint-xl) {
+          display: none;
+        }
       }
       &:before {
         left: -20px;
@@ -472,10 +670,17 @@
       align-items: center;
       transform: scale(.7);
       transition:all 100ms linear;
+      @media (max-width: $breakpoint-lg) {
+        width: 100%;
+        // transform: scale(1);
+      }
       &.swiper-slide-active {
         width: 33.33%;
         opacity: 1;
         transform: scale(1);
+        @media (max-width: $breakpoint-lg) {
+          width: 100%;
+        }
       }
     }
   }
@@ -489,6 +694,12 @@
   }
   &__item {
     width: 20%;
+    @media (max-width: $breakpoint-lg) {
+      width: 33.33%;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 50%;
+    }
     & img {
       @include defaultIcon(contain);
       width: 90%;

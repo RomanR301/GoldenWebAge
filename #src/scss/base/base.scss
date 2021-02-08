@@ -22,3 +22,8 @@ body.active {
   overflow: hidden;
 } 
 
+.hidden-md {
+  @media (min-width: $breakpoint-md) {
+    display: none;
+  }
+}

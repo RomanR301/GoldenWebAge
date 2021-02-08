@@ -155,6 +155,15 @@
   &:hover {
     color: $goldenColor2;
   }
+  @media (max-width: $breakpoint-xl) {
+    top: 40%;
+  }
+  @media (max-width: $breakpoint-lg) {
+    top: 35%;
+  }
+  @media (max-width: 450px) {
+    top: 27%;
+  }
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -171,11 +180,24 @@
   letter-spacing: 0;
   text-transform: none;
   font-variant: initial;
+  @media (max-width: $breakpoint-xl) {
+    font-size: 40px;
+  }
+  @media (max-width: $breakpoint-lg) {
+    font-size: 30px;
+    font-weight: 700;
+  }
 }
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
   left: 31%;
   right: auto;
+  @media (max-width: $breakpoint-md) {
+    left: 20%;
+  }
+  @media (max-width: 450px) {
+    left: 20px;
+  }
 }
 .swiper-button-prev:after,
 .swiper-container-rtl .swiper-button-next:after {
@@ -185,6 +207,12 @@
 .swiper-container-rtl .swiper-button-prev {
   right: 31%;
   left: auto;
+  @media (max-width: $breakpoint-md) {
+    right: 20%;
+  }
+  @media (max-width: 450px) {
+    right: 20px;
+  }
 }
 .swiper-button-next:after,
 .swiper-container-rtl .swiper-button-prev:after {

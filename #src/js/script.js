@@ -149,10 +149,10 @@ let modal = {
             var navBack = document.createElement("span");
             navTitle.className = "nav-title";        
             navBack.className = "prev-page"
-            navBack.innerHTML = '<i class="icon-arrow-big"></i>Назад';
+            navBack.innerHTML = '<i class="icon-icon-arrow-bottom"></i>GO BACK';
             navTitle.innerHTML = $(this).prev().text();
-            $(this).next().prepend(navBack);
             $(this).next('.sub-menu').prepend(navTitle);
+            $(this).next().prepend(navBack);
             $('.menu-item-has-child').toggleClass('show');
         });
         
