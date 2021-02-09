@@ -552,6 +552,41 @@ strong {
   bottom: 6px;
 }
 
+.pulse {
+  -webkit-animation: pulse 1s linear infinite;
+  animation: pulse 1s linear infinite;
+}
+
+footer .first-row span {
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  color: #d4b982 !important;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
 @keyframes fillAnimation {
   0% {
     transform: rotate(-45deg);
@@ -4307,11 +4342,6 @@ button.swiper-pagination-bullet {
     color: #D4B982;
   }
 
-  .menu-item-has-child {
-    display: flex;
-    align-items: center;
-  }
-
   .menu-item-has-child .sub-menu {
     position: fixed;
     width: 100%;
@@ -4350,9 +4380,9 @@ button.swiper-pagination-bullet {
 
   .nav-btn {
     display: block;
-    position: static;
     transform: rotate(-90deg);
-    margin-left: 20px;
+    right: -60px;
+    margin: 0;
   }
 
   .nav-btn i:before {
@@ -4661,7 +4691,8 @@ button.swiper-pagination-bullet {
   .hero-screen__image {
     width: 320px;
     margin: 0 auto;
-    padding: 90px 0 120px 0;
+    padding: 0;
+    margin: 90px auto 120px auto;
   }
 
   .hero-screen__image .main-screen-phone {
@@ -4674,19 +4705,19 @@ button.swiper-pagination-bullet {
 
   .frame__search {
     right: -98px;
-    top: -30px;
+    top: -110px;
     width: 360px;
   }
 
   .frame__conversion {
-    bottom: -30px;
+    bottom: -150px;
     right: 20px;
     left: unset;
   }
 
   .frame__perfomance {
     left: -80px;
-    top: -70px;
+    top: -150px;
   }
 
   .we-provide__title .golden2 {

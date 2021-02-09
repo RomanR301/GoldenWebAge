@@ -1,7 +1,6 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-
 .fade-in {
   animation: fade-in .35s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -131,6 +130,40 @@
   }
 }
 
+.pulse {
+  -webkit-animation: pulse 1s linear infinite;
+  animation: pulse 1s linear infinite
+}
+
+footer .first-row span {
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  color: #d4b982!important
+}
+
+@keyframes pulse {
+  0%,100% {
+      -webkit-transform: scale(1);
+      transform: scale(1)
+  }
+
+  50% {
+      -webkit-transform: scale(.9);
+      transform: scale(.9)
+  }
+}
+
+@-webkit-keyframes pulse {
+  0%,100% {
+      -webkit-transform: scale(1);
+      transform: scale(1)
+  }
+
+  50% {
+      -webkit-transform: scale(.9);
+      transform: scale(.9)
+  }
+}
 
 
 @keyframes fillAnimation{

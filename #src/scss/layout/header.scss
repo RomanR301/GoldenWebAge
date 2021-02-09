@@ -165,8 +165,8 @@
     margin-right: 55px;
   }
   @media (max-width: $breakpoint-xl) {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
   }
   & .sub-menu {
     position: absolute;
@@ -310,10 +310,12 @@
   }
   @media (max-width: $breakpoint-xl){
     display: block;
-    position: static;
+    // position: static;
     transform: rotate(-90deg);
     // right: -70px;
-    margin-left: 20px;
+    // margin-left: 20px;
+    right: -60px;
+    margin: 0;
     & i:before {
       font-size: 20px;
     }

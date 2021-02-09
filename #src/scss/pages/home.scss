@@ -68,7 +68,9 @@
     @media (max-width: $breakpoint-md) {
       width: 320px;
       margin: 0 auto;
-      padding: 90px 0 120px 0;
+      // padding: 90px 0 120px 0;
+      padding: 0;
+      margin: 90px auto 120px auto;
     }
     & .main-screen-phone {
       @include defaultIcon(contain);
@@ -149,7 +151,8 @@
     }
     @media (max-width: $breakpoint-md) {
       right: -98px;
-      top: -30px;
+      // top: -30px;
+      top: -110px;
       width: 360px;
     }
     & .frame__data {
@@ -174,7 +177,8 @@
       bottom: 5%;
     }
     @media (max-width: $breakpoint-md) {
-      bottom: -30px;
+      // bottom: -30px;
+      bottom: -150px;
       right: 20px;
       left: unset;
     }
@@ -201,7 +205,8 @@
     }
     @media (max-width: $breakpoint-md) {
       left: -80px;
-      top: -70px;
+      // top: -70px;
+      top: -150px;
     }
     & .frame__title {
       margin-bottom: 10px;
