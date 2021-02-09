@@ -108,14 +108,12 @@ let modal = {
       let modalWindow = $(id);
       modalWindow.fadeIn();
       modalWindow.find('.modal__content').removeClass('animate-away').addClass('animate-in');
-      // $('body, html').addClass('active');
   },
 
   closeModal: function (id) {
       let modalWindow = $(id);
       modalWindow.find('.modal__content').removeClass('animate-in').addClass('animate-away');
       modalWindow.fadeOut();
-      // $('body, html').removeClass('active');
   },
 
   events: function () {
@@ -233,4 +231,13 @@ $('.perfomance__total').each(function () {
   }, 800);
   var $this = $(this);
 
+});
+
+var rellax = new Rellax('.rellax', {
+  // speed: 1,
+  // center: false,
+  // wrapper: null,
+  // round: true,
+  // vertical: true,
+  // horizontal: false
 });

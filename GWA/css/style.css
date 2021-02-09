@@ -3187,6 +3187,7 @@ button.swiper-pagination-bullet {
 .hero-screen {
   height: calc(100vh - 20px);
   position: relative;
+  z-index: 2;
 }
 
 .hero-screen .container,
@@ -4726,19 +4727,6 @@ button.swiper-pagination-bullet {
 
   .projects-list {
     margin: -35px 15px 0 15px;
-  }
-
-  .projects-item__technologies {
-    flex-direction: column;
-  }
-
-  .projects-item__technologies li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .projects-item__technologies li:after {
-    margin: 15px 0;
   }
 
   .why-us__image {
