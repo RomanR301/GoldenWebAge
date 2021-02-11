@@ -1960,7 +1960,8 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .page-about,
-.page-home {
+.page-home,
+.page-services {
   overflow-x: hidden;
 }
 
@@ -1970,10 +1971,26 @@ input[type="checkbox"]:checked + label:before {
   box-shadow: inset 0px 4px 30px rgba(0, 0, 0, 0.25);
 }
 
+.page-about .breadcrumbs {
+  top: 145px;
+}
+
+.page-services .main-screen__image {
+  margin-top: 160px;
+}
+
 .main-screen {
   height: calc(100vh - 20px);
   position: relative;
   z-index: 2;
+}
+
+.main-screen .container {
+  position: relative;
+}
+
+.main-screen .section-title {
+  margin-bottom: 25px;
 }
 
 .main-screen .container,
@@ -2046,6 +2063,67 @@ input[type="checkbox"]:checked + label:before {
   left: 0;
   top: 0;
   background: rgba(212, 185, 130, 0.4);
+}
+
+.breadcrumbs {
+  position: absolute;
+  display: flex;
+  top: 190px;
+  left: 30px;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs li:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: #D4B982;
+  margin: 0 8px;
+}
+
+.breadcrumbs li:last-child:after {
+  display: none;
+}
+
+.breadcrumbs a {
+  color: #B7B7B7;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.breadcrumbs a:before {
+  content: '';
+  background: #B7B7B7;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 2px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.breadcrumbs a:hover:before {
+  opacity: 1;
+}
+
+.breadcrumbs span {
+  font-size: 16px;
+  line-height: 24px;
+  color: #292620;
 }
 
 .container {
@@ -4647,6 +4725,11 @@ button.swiper-pagination-bullet {
     font-size: 16px;
   }
 
+  .page-services .main-screen__image {
+    width: 440px;
+    margin: 0 auto;
+  }
+
   .main-screen {
     height: auto;
     padding-top: 20px;
@@ -4668,6 +4751,11 @@ button.swiper-pagination-bullet {
   .main-screen__image .main-image {
     width: 100%;
     margin: 0 auto;
+  }
+
+  .breadcrumbs {
+    position: static;
+    margin: 20px;
   }
 
   .row {
@@ -5079,7 +5167,7 @@ button.swiper-pagination-bullet {
   }
 
   .main-screen__description {
-    display: none;
+    width: 100%;
   }
 
   .main-screen__image .main-image {
@@ -5285,6 +5373,13 @@ button.swiper-pagination-bullet {
 
   .about-we-provide__image img {
     object-fit: cover;
+  }
+}
+
+@media (max-width: 500px) {
+  .page-services .main-screen__image {
+    width: 120%;
+    margin-left: -10%;
   }
 }
 

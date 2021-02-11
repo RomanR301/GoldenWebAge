@@ -1,0 +1,32 @@
+<svg width="117" height="136" viewBox="0 0 117 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="52.5" cy="41.5" r="17.5" stroke="#D4B982" stroke-width="2"/>
+<circle cx="92.5" cy="41.5" r="10.5" stroke="#D4B982" stroke-width="2"/>
+<mask id="path-3-inside-1" fill="white">
+<rect x="17" y="19" width="13" height="33" rx="0.965665"/>
+</mask>
+<rect x="17" y="19" width="13" height="33" rx="0.965665" fill="white" stroke="#D4B982" stroke-width="4" mask="url(#path-3-inside-1)"/>
+<mask id="path-4-inside-2" fill="white">
+<rect x="28" y="7" width="13" height="45" rx="0.965665"/>
+</mask>
+<rect x="28" y="7" width="13" height="45" rx="0.965665" fill="white" stroke="#D4B982" stroke-width="4" mask="url(#path-4-inside-2)"/>
+<mask id="path-5-inside-3" fill="white">
+<rect x="53" width="13" height="52" rx="0.965665"/>
+</mask>
+<rect x="53" width="13" height="52" rx="0.965665" fill="white" stroke="#D4B982" stroke-width="4" mask="url(#path-5-inside-3)"/>
+<mask id="path-6-inside-4" fill="white">
+<rect x="65" y="19" width="13" height="33" rx="0.965665"/>
+</mask>
+<rect x="65" y="19" width="13" height="33" rx="0.965665" fill="white" stroke="#D4B982" stroke-width="4" mask="url(#path-6-inside-4)"/>
+<mask id="path-7-inside-5" fill="white">
+<rect x="76" y="11" width="13" height="41" rx="0.965665"/>
+</mask>
+<rect x="76" y="11" width="13" height="41" rx="0.965665" fill="white" stroke="#D4B982" stroke-width="4" mask="url(#path-7-inside-5)"/>
+<path d="M48.797 109.49L1 57.7935V46.9657C1 46.4323 1.43234 46 1.96567 46H115.034C115.568 46 116 46.4323 116 46.9657V57.7935L68.0671 109.49C67.9015 109.668 67.8095 109.903 67.8095 110.146V133.327C67.8095 134.07 67.0046 134.535 66.3609 134.163L49.5362 124.445C49.2376 124.273 49.0536 123.954 49.0536 123.609V110.145C49.0536 109.902 48.9619 109.668 48.797 109.49Z" fill="white"/>
+<path d="M1 57.7935L48.797 109.49C48.9619 109.668 49.0536 109.902 49.0536 110.145V123.609C49.0536 123.954 49.2376 124.273 49.5362 124.445L66.3609 134.163C67.0046 134.535 67.8095 134.07 67.8095 133.327V110.146C67.8095 109.903 67.9015 109.668 68.0671 109.49L116 57.7935M1 57.7935H116M1 57.7935V46.9657C1 46.4323 1.43234 46 1.96567 46H115.034C115.568 46 116 46.4323 116 46.9657V57.7935" stroke="#D4B982" stroke-width="2"/>
+<line x1="14" y1="72" x2="102" y2="72" stroke="#D4B982" stroke-width="2"/>
+<line x1="28" y1="87" x2="88" y2="87" stroke="#D4B982" stroke-width="2"/>
+<line x1="43" y1="102" x2="75" y2="102" stroke="#D4B982" stroke-width="2"/>
+<line y1="-1" x2="16" y2="-1" transform="matrix(0.707371 -0.706843 0.707371 0.706843 89 46)" stroke="#D4B982" stroke-width="2"/>
+<line y1="-1" x2="17" y2="-1" transform="matrix(-0.75785 -0.652429 0.652989 -0.757368 53 46)" stroke="#D4B982" stroke-width="2"/>
+<line y1="-1" x2="23" y2="-1" transform="matrix(-0.273815 -0.961782 0.96189 -0.273437 53 46)" stroke="#D4B982" stroke-width="2"/>
+</svg>
