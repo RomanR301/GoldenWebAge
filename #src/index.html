@@ -1,436 +1,537 @@
-@@include('_header.html')
-<main>
-  <section class="hero-screen">
-    <div class="hero-screen__bg">
-      <img src="./img/thin-lines-golden.svg" alt="">
-    </div>
-    <div class="container">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <title>Golden Web Age</title>
+</head>
+
+
+<body>
+  <header class="header">
+    <div class="container" data-aos="fade-in" data-aos-delay="500">
       <div class="row align-middle">
-        <div class="col-xl-6 col-xs-12">
-          <div class="hero-screen__text">
-            <h1 class="section-title" data-aos="fade-up" data-aos-delay="200">
-              <span>GOLDEN</span> <br>WEB AGE
-            </h1>
-            <h2 class="hero-screen__subtitle" data-aos="fade-up" data-aos-delay="300">
-              WEB and SEO PERFORMANCE AGENCY
-            </h2>
-            <h4 class="hero-screen__description" data-aos="fade-up" data-aos-delay="400">
+        <a href="index.html" class="header-logo">
+          <img src="./img/main-logo.svg" alt="Web Golden Age logo">
+        </a>
+        <div class="navbar">
+          <ul class="menu">
+            <li class="menu-item">
+              <a class="home-link" href="index.html">Home</a>
+            </li>
+            <li class="menu-item">
+              <a class="about-link" href="about.html">About Us</a>
+            </li>
+            <li class="menu-item menu-item-has-child">
+              <a class="services-link" href="#">Services</a>
+              <button class="nav-btn">
+                <i class="icon-icon-arrow-bottom"></i>
+              </button>
+              <ul class="sub-menu">
+                <li class="menu-item">
+                  <a href="#">UX/UI Web Design</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Online Marketing</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">SEO</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Web Hosting, Maintenance & Care</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Conversion Optimization</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Web Analytics &
+                    Business Intelligence</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="#">Projects</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Case Studies</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Blog</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+          <div class="navbar-contacts">
+            <div class="navbar-contacts__btn">
+              <div class="btn btn-primary">Contact Us</div>
+            </div>
+            <p>Golden Web Age UG (limited liability)</p>
+            <p>Reiterweg 9a</p>
+            <p>82178 Puchheim near Munich</p>
+            <p>Tel .: <a href="tel:+498999529096">+49 (0) 89/995 290 96</a></p>
+            <p>Fax: <a href="tel:+4908989026615">+49 (0) 89 / 890 266 15</a></p>
+            <p>E-Mail: <a href="mailto:info@goldenwebage.de">info@goldenwebage.de</a></p>
+          </div>
+        </div>
+        <div class="header-cta btn btn-primary modalTrigger" data-modal="#callbackModal">Write Us</div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="body-padding"></div>
+  <main class="page-home">
+    <section class="hero-screen">
+      <div class="hero-screen__bg">
+        <img src="./img/thin-lines-golden.svg" alt="">
+      </div>
+      <div class="container">
+        <div class="row align-middle">
+          <div class="col-xl-6 col-xs-12">
+            <div class="hero-screen__text">
+              <h1 class="section-title" data-aos="fade-up" data-aos-delay="200">
+                <span>GOLDEN</span> <br>WEB AGE
+              </h1>
+              <h2 class="hero-screen__subtitle" data-aos="fade-up" data-aos-delay="300">
+                WEB and SEO PERFORMANCE AGENCY
+              </h2>
+              <h4 class="hero-screen__description" data-aos="fade-up" data-aos-delay="400">
+                Full service digital studio based in München, Germany. We are a full service digital agency specialising
+                in
+                Web Design, SEO, SEA and Hosting
+              </h4>
+            </div>
+          </div>
+          <div class="col-xl-6 col-xs-12 rellax" data-rellax-speed="-1" data-rellax-xs-speed="0">
+            <div class="hero-screen__image">
+              <img class="hero-screen-phone" src="./img/main-screen-phone.png" data-aos="zoom-out" data-aos-delay="500"
+                data-aos-easing="ease-out" alt="">
+              <img class="hero-screen-circle" src="./img/main-screen-circle.svg" data-aos="fade-in" data-aos-delay="700"
+                alt="">
+              <div class="frame frame__search" data-aos="fade-up" data-aos-delay="700">
+                <div class="frame__container">
+                  <div class="frame__title">Search Engine Optimisation</div>
+                  <div class="frame__data">
+                    <div class="frame__difference">
+                      <i class="icon-icon-arrow-top"></i>
+                      +4 places
+                    </div>
+                    <div class="frame__number">
+                      #3 from 120
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame frame__conversion" data-aos="fade-up" data-aos-delay="700">
+                <div class="frame__title">Conversion Optimization</div>
+                <div class="frame__difference">+5,13% CR</div>
+                <div class="frame__number">9,83%</div>
+              </div>
+              <div class="frame frame__perfomance" data-aos="fade-up" data-aos-delay="700">
+                <div class="frame__data">
+                  <div class="frame__title">Performance Website</div>
+                  <div class="frame__difference">+0,1 sec Load Speed</div>
+                  <div class="frame__number">0,2 sec</div>
+                </div>
+                <div class="semi-donut margin" style="--percentage : 97; --fill: #D4B982 ;">
+                  <span class="perfomance__total">97</span>
+                  <span>Page Speed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 hidden-md">
+            <h4 class="hero-screen__description_mobile">
               Full service digital studio based in München, Germany. We are a full service digital agency specialising
               in
               Web Design, SEO, SEA and Hosting
             </h4>
           </div>
         </div>
-        <div class="col-xl-6 col-xs-12 rellax" data-rellax-speed="-1" data-rellax-xs-speed="0">
-          <div class="hero-screen__image">
-            <img class="main-screen-phone" src="./img/main-screen-phone.png" data-aos="zoom-out" data-aos-delay="500"
-              data-aos-easing="ease-out" alt="">
-            <img class="main-screen-circle" src="./img/main-screen-circle.svg" data-aos="fade-in" data-aos-delay="700"
-              alt="">
-            <div class="frame frame__search" data-aos="fade-up" data-aos-delay="700">
-              <div class="frame__title">Search Engine Optimisation</div>
-              <div class="frame__data">
-                <div class="frame__difference">
-                  <i class="icon-icon-arrow-top"></i>
-                  +4 places
+      </div>
+    </section>
+    <section class="we-provide">
+      <div class="container">
+        <div class="row m-0">
+          <div class="col-lg-6 col-xs-12 column">
+            <div class="we-provide__title">
+              <span class="small" data-aos="fade-up">WE PROVIDE</span>
+              <span class="golden2" data-aos="fade-up">INDIVIDUAL</span>
+              <span class="golden2" data-aos="fade-up">SOLUTIONS</span>
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-6 col-xs-12 column">
+            <div class="we-provide__description" data-aos="fade-in" data-aos-duration="1000">
+              <p>The Golden Web Age is your first point of contact for all topics related to search engine optimization
+                (SEO)
+                and web design. We provide you with an individual online presence and take care of the security of your
+                website, the graphic design and the conversion optimization.</p>
+              <p>We have already been able to win over numerous well-known companies with a wide variety of projects and
+                support these companies individually in their entire online business.</p>
+              <p>Get in touch with us so that golden times begin for you too!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="container">
+        <div class="row">
+          <div class="section-title" data-aos="fade-up">
+            <span>Recent</span> Works
+          </div>
+        </div>
+        <div class="row m-0 projects-list">
+          <div class="col-md-6 col-xs-12 column">
+            <div class="projects-item" data-aos="fade-up">
+              <div class="projects-item__image">
+                <img src="./img/imac1.png" alt="Miomente GmbH">
+              </div>
+              <div class="projects-item__title heading-4" data-aos="fade-up">Miomente GmbH</div>
+              <div class="projects-item__services" data-aos="fade-up">CRO CONSULTING, WEB DESIGN / PROGRAMMING, TRACKING
+              </div>
+              <ul class="projects-item__technologies" data-aos="fade-up">
+                <li>Magento</li>
+                <li>HTML / CSS</li>
+                <li>JS</li>
+                <li>Google Analytics</li>
+                <li>Google Tag Manager</li>
+              </ul>
+              <a href="#" class="arrow-link">View Live Website</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12 column">
+            <div class="projects-item" data-aos="fade-up">
+              <div class="projects-item__image">
+                <img src="./img/imac2.png" alt="Grünbeck water treatment GmbH">
+              </div>
+              <div class="projects-item__title heading-4" data-aos="fade-up">Grünbeck water treatment GmbH</div>
+              <div class="projects-item__services" data-aos="fade-up">WEB DESIGN, USER EXPERIENCE, WEB DEVELOPMENT</div>
+              <ul class="projects-item__technologies" data-aos="fade-up">
+                <li>HTML / CSS</li>
+                <li>JS</li>
+              </ul>
+              <a href="#" class="arrow-link">View Live Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <div class="row align-middle" data-aos="fade-up">
+          <div class="section-title">
+            <span>OUR</span> SERVICES
+          </div>
+          <a href="#" class="arrow-link">View All Services</a>
+        </div>
+        <div class="row m-0 services-list">
+          <div class="col-xl-4 col-lg-6 col-xs-12 column" data-aos="fade-up" data-aos-duration="600">
+            <div class="services-item">
+              <div class="services-inner-container">
+                <div class="services-item__image">
+                  <img src="./img/services-uiux.svg" alt="">
                 </div>
-                <div class="frame__number">
-                  #3 from 120
+                <div class="services-item__title heading-4">UX/UI Web Design</div>
+                <div class="services-item__description">
+                  Do you want a professional online presence?
+                  Together with you we develop your individual web design - according to your wishes. Alternatively, we
+                  can also revise your existing layout and bring your online presence up to date with the latest
+                  technology.
                 </div>
               </div>
-            </div>
-            <div class="frame frame__conversion" data-aos="fade-up" data-aos-delay="700">
-              <div class="frame__title">Conversion Optimization</div>
-              <div class="frame__difference">+5,13% CR</div>
-              <div class="frame__number">9,83%</div>
-            </div>
-            <div class="frame frame__perfomance" data-aos="fade-up" data-aos-delay="700">
-              <div class="frame__data">
-                <div class="frame__title">Performance Website</div>
-                <div class="frame__difference">+0,1 sec Load Speed</div>
-                <div class="frame__number">0,2 sec</div>
-              </div>
-              <div class="semi-donut margin" style="--percentage : 97; --fill: #D4B982 ;">
-                <span class="perfomance__total">97</span>
-                <span>Page Speed</span>
-              </div>
+              <a href="#" class="arrow-link">Learn More</a>
             </div>
           </div>
-        </div>
-        <div class="col-xs-12 hidden-md">
-          <h4 class="hero-screen__description_mobile">
-            Full service digital studio based in München, Germany. We are a full service digital agency specialising
-            in
-            Web Design, SEO, SEA and Hosting
-          </h4>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="we-provide">
-    <div class="container">
-      <div class="row m-0">
-        <div class="col-lg-6 col-xs-12 column">
-          <div class="we-provide__title">
-            <span class="small" data-aos="fade-up">WE PROVIDE</span>
-            <span class="golden2" data-aos="fade-up">INDIVIDUAL</span>
-            <span class="golden2" data-aos="fade-up">SOLUTIONS</span>
+          <div class="col-xl-4 col-lg-6 col-xs-12 column" data-aos="fade-up" data-aos-duration="600">
+            <div class="services-item">
+              <div class="services-inner-container">
+                <div class="services-item__image">
+                  <img src="./img/services-marketing.svg" alt="">
+                </div>
+                <div class="services-item__title heading-4">Online Marketing</div>
+                <div class="services-item__description">
+                  <p>Do you have a nice website and still not found by your customers?</p>
+                  <p>We support you with ideal online marketing measures so that you can pick up your target group there
+                    -
+                    where it is: ONLINE!</p>
+                </div>
+              </div>
+              <a href="#" class="arrow-link">Learn More</a>
+            </div>
           </div>
-        </div>
-        <div class="col-xl-5 col-lg-6 col-xs-12 column">
-          <div class="we-provide__description" data-aos="fade-in" data-aos-duration="1000">
-            <p>The Golden Web Age is your first point of contact for all topics related to search engine optimization
-              (SEO)
-              and web design. We provide you with an individual online presence and take care of the security of your
-              website, the graphic design and the conversion optimization.</p>
-            <p>We have already been able to win over numerous well-known companies with a wide variety of projects and
-              support these companies individually in their entire online business.</p>
-            <p>Get in touch with us so that golden times begin for you too!</p>
+          <div class="col-xl-4 col-lg-6 col-xs-12 column" data-aos="fade-up" data-aos-duration="600">
+            <div class="services-item">
+              <div class="services-inner-container">
+                <div class="services-item__image">
+                  <img src="./img/services-seo.svg" alt="">
+                </div>
+                <div class="services-item__title heading-4">SEO</div>
+                <div class="services-item__description">
+                  We specialize in particular in optimizing your visibility in search engines. We work with you to
+                  develop
+                  a strategy that will bring you many organic visitors in the long term. You will also receive monthly
+                  reports on the success of the measures.
+                </div>
+              </div>
+              <a href="#" class="arrow-link">Learn More</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="projects">
-    <div class="container">
-      <div class="row">
-        <div class="section-title" data-aos="fade-up">
-          <span>Recent</span> Works
-        </div>
-      </div>
-      <div class="row m-0 projects-list">
-        <div class="col-md-6 col-xs-12 column">
-          <div class="projects-item" data-aos="fade-up">
-            <div class="projects-item__image">
-              <img src="./img/imac1.png" alt="Miomente GmbH">
+    <section class="home-why-us">
+      <div class="container">
+        <div class="row">
+          <div class="home-why-us-inner">
+            <div class="home-why-us__text">
+              <div class="section-title" data-aos="fade-up">
+                Why CLIENTS <br> <span>Choose US?</span>
+              </div>
+              <blockquote class="home-why-us__quote" data-aos="fade-up">
+                <p>I know half of my advertising is money thrown away. I just don't know which half. </p>
+                <cite>- Henry Ford</cite>
+                <img src="./img/henry-ford.png" alt="Henry Ford">
+              </blockquote>
+              <p data-aos="fade-up">
+                Without a solid quantitative database, you should no longer make decisions about your product, marketing
+                or optimization measures. A number-based strategy is always an important part of our offering so that
+                you
+                have full transparency about your online activities at all times. Whether for design, search engine
+                optimization or online marketing - you will always receive a report from us on the results of our
+                measures.
+              </p>
             </div>
-            <div class="projects-item__title heading-4" data-aos="fade-up">Miomente GmbH</div>
-            <div class="projects-item__services" data-aos="fade-up">CRO CONSULTING, WEB DESIGN / PROGRAMMING, TRACKING</div>
-            <ul class="projects-item__technologies" data-aos="fade-up">
-              <li>Magento</li>
-              <li>HTML / CSS</li>
-              <li>JS</li>
-              <li>Google Analytics</li>
-              <li>Google Tag Manager</li>
-            </ul>
-            <a href="#" class="arrow-link">View Live Website</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-xs-12 column">
-          <div class="projects-item" data-aos="fade-up">
-            <div class="projects-item__image">
-              <img src="./img/imac2.png" alt="Grünbeck water treatment GmbH">
+            <div class="home-why-us__image" data-aos="fade-in" data-aos-duration="1000">
+              <img src="./img/mountain.png" alt="">
             </div>
-            <div class="projects-item__title heading-4" data-aos="fade-up">Grünbeck water treatment GmbH</div>
-            <div class="projects-item__services" data-aos="fade-up">WEB DESIGN, USER EXPERIENCE, WEB DEVELOPMENT</div>
-            <ul class="projects-item__technologies" data-aos="fade-up">
-              <li>HTML / CSS</li>
-              <li>JS</li>
-            </ul>
-            <a href="#" class="arrow-link">View Live Website</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section class="callback-banner" data-aos="fade-in">
+      <div class="callback-banner__container">
+        <div class="callback-banner__title"> Like what we do? Don't hesitate to Contact us!</div>
+        <button class="btn btn-secondary callback-banner__btn modalTrigger" data-modal="#callbackModal">Contact
+          Us</button>
+      </div>
+    </section>
 
-  <section class="services">
-    <div class="container">
-      <div class="row align-middle" data-aos="fade-up">
-        <div class="section-title">
-          <span>OUR</span> SERVICES
-        </div>
-        <a href="#" class="arrow-link">View All Services</a>
-      </div>
-      <div class="row m-0 services-list">
-        <div class="col-xl-4 col-lg-6 col-xs-12 column" data-aos="fade-up" data-aos-duration="600">
-          <div class="services-item">
-            <div class="services-inner-container">
-              <div class="services-item__image">
-                <img src="./img/services-uiux.svg" alt="">
-              </div>
-              <div class="services-item__title heading-4">UX/UI Web Design</div>
-              <div class="services-item__description">
-                Do you want a professional online presence?
-                Together with you we develop your individual web design - according to your wishes. Alternatively, we
-                can also revise your existing layout and bring your online presence up to date with the latest
-                technology.
-              </div>
-            </div>
-            <a href="#" class="arrow-link">Learn More</a>
+    <section class="clients">
+      <div class="container">
+        <div class="row align-middle" data-aos="fade-up">
+          <div class="section-title">
+            Our <span>clients</span>
           </div>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-xs-12 column" data-aos="fade-up" data-aos-duration="600">
-          <div class="services-item">
-            <div class="services-inner-container">
-              <div class="services-item__image">
-                <img src="./img/services-marketing.svg" alt="">
-              </div>
-              <div class="services-item__title heading-4">Online Marketing</div>
-              <div class="services-item__description">
-                <p>Do you have a nice website and still not found by your customers?</p>
-                <p>We support you with ideal online marketing measures so that you can pick up your target group there -
-                  where it is: ONLINE!</p>
-              </div>
-            </div>
-            <a href="#" class="arrow-link">Learn More</a>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-xs-12 column" data-aos="fade-up" data-aos-duration="600">
-          <div class="services-item">
-            <div class="services-inner-container">
-              <div class="services-item__image">
-                <img src="./img/services-seo.svg" alt="">
-              </div>
-              <div class="services-item__title heading-4">SEO</div>
-              <div class="services-item__description">
-                We specialize in particular in optimizing your visibility in search engines. We work with you to develop
-                a strategy that will bring you many organic visitors in the long term. You will also receive monthly
-                reports on the success of the measures.
-              </div>
-            </div>
-            <a href="#" class="arrow-link">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="why-us">
-    <div class="container">
-      <div class="row">
-        <div class="why-us-inner">
-          <div class="why-us__text">
-            <div class="section-title" data-aos="fade-up">
-              Why CLIENTS <br> <span>Choose US?</span>
-            </div>
-            <blockquote class="why-us__quote" data-aos="fade-up">
-              <p>I know half of my advertising is money thrown away. I just don't know which half. </p>
-              <cite>- Henry Ford</cite>
-              <img src="./img/henry-ford.png" alt="Henry Ford">
-            </blockquote>
-            <p data-aos="fade-up">
-              Without a solid quantitative database, you should no longer make decisions about your product, marketing
-              or optimization measures. A number-based strategy is always an important part of our offering so that you
-              have full transparency about your online activities at all times. Whether for design, search engine
-              optimization or online marketing - you will always receive a report from us on the results of our
-              measures.
-            </p>
-          </div>
-          <div class="why-us__image" data-aos="fade-in" data-aos-duration="1000">
-            <img src="./img/mountain.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="callback-banner" data-aos="fade-in">
-    <div class="callback-banner__container">
-      <div class="callback-banner__title"> Like what we do? Don't hesitate to Contact us!</div>
-      <button class="btn btn-secondary callback-banner__btn modalTrigger" data-modal="#callbackModal">Contact Us</button>
-    </div>
-  </section>
-
-  <section class="clients">
-    <div class="container">
-      <div class="row align-middle" data-aos="fade-up">
-        <div class="section-title">
-          Our <span>clients</span>
-        </div>
-        <div class="clients-google">
-          <div class="clients-google__header">
-            <div class="clients-google__image">
-              <img src="./img/google.svg" alt="">
-            </div>
-            <div class="clients-google__title">Customer testimonials</div>
-          </div>
-          <div class="clients-google__rating">
-            <div class="clients-google__rating_number">5.0</div>
-            <div class="clients-google__rating_stars">
-              <i class="icon-icon-star"></i>
-              <i class="icon-icon-star"></i>
-              <i class="icon-icon-star"></i>
-              <i class="icon-icon-star"></i>
-              <i class="icon-icon-star"></i>
-            </div>
-          </div>
-          <a href="#" class="clients-google__more">
-            Learn More
-            <i class="icon-icon-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid p-zero" data-aos="fade-in">
-      <div class="clients-carousel-container">
-        <div class="swiper-container clients-carousel">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="clients__author">
-                <img src="./img/clients-author.png" alt="">
-              </div>
-              <div class="clients__author_name">Michael Gobran</div>
-              <div class="clients__google_icon">
+          <div class="clients-google">
+            <div class="clients-google__header">
+              <div class="clients-google__image">
                 <img src="./img/google.svg" alt="">
               </div>
-              <div class="clients__google_rating">5.0</div>
-              <div class="clients__google_stars">
+              <div class="clients-google__title">Customer testimonials</div>
+            </div>
+            <div class="clients-google__rating">
+              <div class="clients-google__rating_number">5.0</div>
+              <div class="clients-google__rating_stars">
                 <i class="icon-icon-star"></i>
                 <i class="icon-icon-star"></i>
                 <i class="icon-icon-star"></i>
                 <i class="icon-icon-star"></i>
                 <i class="icon-icon-star"></i>
               </div>
-              <div class="clients__text">Die Zusammenarbeit mit Golden Web Age war bislang immer von Erfolg
-                gekrönt. Das Team arbeitet äußerst akribisch und blickt durch das Stellen kritischer Fragen auch über
-                den Tellerrand hinaus. Genau so stellen wir uns eine professionelle Zusammenarbeit vor. Klare
-                Empfehlung!</div>
             </div>
-            <div class="swiper-slide">
-              <div class="clients__author">
-                <img src="./img/clients-author.png" alt="">
-              </div>
-              <div class="clients__author_name">Michael Gobran</div>
-              <div class="clients__google_icon">
-                <img src="./img/google.svg" alt="">
-              </div>
-              <div class="clients__google_rating">5.0</div>
-              <div class="clients__google_stars">
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-              </div>
-              <div class="clients__text">Die Zusammenarbeit mit Golden Web Age war bislang immer von Erfolg
-                gekrönt. Das Team arbeitet äußerst akribisch und blickt durch das Stellen kritischer Fragen auch über
-                den Tellerrand hinaus. Genau so stellen wir uns eine professionelle Zusammenarbeit vor. Klare
-                Empfehlung!</div>
-            </div>
-            <div class="swiper-slide">
-              <div class="clients__author">
-                <img src="./img/clients-author.png" alt="">
-              </div>
-              <div class="clients__author_name">Michael Gobran</div>
-              <div class="clients__google_icon">
-                <img src="./img/google.svg" alt="">
-              </div>
-              <div class="clients__google_rating">5.0</div>
-              <div class="clients__google_stars">
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-              </div>
-              <div class="clients__text">Die Zusammenarbeit mit Golden Web Age war bislang immer von Erfolg
-                gekrönt. Das Team arbeitet äußerst akribisch und blickt durch das Stellen kritischer Fragen auch über
-                den Tellerrand hinaus. Genau so stellen wir uns eine professionelle Zusammenarbeit vor. Klare
-                Empfehlung!</div>
-            </div>
-            <div class="swiper-slide">
-              <div class="clients__author">
-                <img src="./img/clients-author.png" alt="">
-              </div>
-              <div class="clients__author_name">Michael Gobran</div>
-              <div class="clients__google_icon">
-                <img src="./img/google.svg" alt="">
-              </div>
-              <div class="clients__google_rating">5.0</div>
-              <div class="clients__google_stars">
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-              </div>
-              <div class="clients__text">Die Zusammenarbeit mit Golden Web Age war bislang immer von Erfolg
-                gekrönt. Das Team arbeitet äußerst akribisch und blickt durch das Stellen kritischer Fragen auch über
-                den Tellerrand hinaus. Genau so stellen wir uns eine professionelle Zusammenarbeit vor. Klare
-                Empfehlung!</div>
-            </div>
-            <div class="swiper-slide">
-              <div class="clients__author">
-                <img src="./img/clients-author.png" alt="">
-              </div>
-              <div class="clients__author_name">Michael Gobran</div>
-              <div class="clients__google_icon">
-                <img src="./img/google.svg" alt="">
-              </div>
-              <div class="clients__google_rating">5.0</div>
-              <div class="clients__google_stars">
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-                <i class="icon-icon-star"></i>
-              </div>
-              <div class="clients__text">Die Zusammenarbeit mit Golden Web Age war bislang immer von Erfolg
-                gekrönt. Das Team arbeitet äußerst akribisch und blickt durch das Stellen kritischer Fragen auch über
-                den Tellerrand hinaus. Genau so stellen wir uns eine professionelle Zusammenarbeit vor. Klare
-                Empfehlung!</div>
-            </div>
-
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="clients-logos" data-aos="fade-in">
-    <div class="container">
-      <div class="row align-center">
-        <div class="col-lg-10 col-xs-12">
-          <div class="clients-logos__list">
-            <div class="clients-logos__item">
-              <img src="./img/clients1.svg" alt="">
-            </div>
-            <div class="clients-logos__item">
-              <img src="./img/clients2.svg" alt="">
-            </div>
-            <div class="clients-logos__item">
-              <img src="./img/clients3.svg" alt="">
-            </div>
-            <div class="clients-logos__item">
-              <img src="./img/clients4.svg" alt="">
-            </div>
-            <div class="clients-logos__item">
-              <img src="./img/clients5.svg" alt="">
-            </div>
-            <div class="clients-logos__item">
-              <img src="./img/clients6.svg" alt="">
-            </div>
-            <div class="clients-logos__item">
-              <img src="./img/clients7.svg" alt="">
-            </div>
-            <div class="clients-logos__item">
-              <img src="./img/clients8.svg" alt="">
-            </div>
-            <div class="clients-logos__item">
-              <img src="./img/clients9.svg" alt="">
-            </div>
-            <div class="clients-logos__item">
-              <img src="./img/clients10.svg" alt="">
-            </div>
+            <a href="#" class="clients-google__more">
+              Learn More
+              <i class="icon-icon-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="container-fluid p-zero" data-aos="fade-in">
+        <div class="clients-carousel-container">
+          <div class="swiper-container clients-carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="clients__author">
+                  <img src="./img/clients-author.png" alt="">
+                </div>
+                <div class="clients__author_name">Michael Gobran</div>
+                <div class="clients__google_icon">
+                  <img src="./img/google.svg" alt="">
+                </div>
+                <div class="clients__google_rating">5.0</div>
+                <div class="clients__google_stars">
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                </div>
+                <div class="clients__text">Die Zusammenarbeit mit Golden Web Age war bislang immer von Erfolg
+                  gekrönt. Das Team arbeitet äußerst akribisch und blickt durch das Stellen kritischer Fragen auch über
+                  den Tellerrand hinaus. Genau so stellen wir uns eine professionelle Zusammenarbeit vor. Klare
+                  Empfehlung!</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="clients__author">
+                  <img src="./img/clients-author.png" alt="">
+                </div>
+                <div class="clients__author_name">Michael Gobran</div>
+                <div class="clients__google_icon">
+                  <img src="./img/google.svg" alt="">
+                </div>
+                <div class="clients__google_rating">5.0</div>
+                <div class="clients__google_stars">
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                </div>
+                <div class="clients__text">Die Zusammenarbeit mit Golden Web Age war bislang immer von Erfolg
+                  gekrönt. Das Team arbeitet äußerst akribisch und blickt durch das Stellen kritischer Fragen auch über
+                  den Tellerrand hinaus. Genau so stellen wir uns eine professionelle Zusammenarbeit vor. Klare
+                  Empfehlung!</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="clients__author">
+                  <img src="./img/clients-author.png" alt="">
+                </div>
+                <div class="clients__author_name">Michael Gobran</div>
+                <div class="clients__google_icon">
+                  <img src="./img/google.svg" alt="">
+                </div>
+                <div class="clients__google_rating">5.0</div>
+                <div class="clients__google_stars">
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                </div>
+                <div class="clients__text">Die Zusammenarbeit mit Golden Web Age war bislang immer von Erfolg
+                  gekrönt. Das Team arbeitet äußerst akribisch und blickt durch das Stellen kritischer Fragen auch über
+                  den Tellerrand hinaus. Genau so stellen wir uns eine professionelle Zusammenarbeit vor. Klare
+                  Empfehlung!</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="clients__author">
+                  <img src="./img/clients-author.png" alt="">
+                </div>
+                <div class="clients__author_name">Michael Gobran</div>
+                <div class="clients__google_icon">
+                  <img src="./img/google.svg" alt="">
+                </div>
+                <div class="clients__google_rating">5.0</div>
+                <div class="clients__google_stars">
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                </div>
+                <div class="clients__text">Die Zusammenarbeit mit Golden Web Age war bislang immer von Erfolg
+                  gekrönt. Das Team arbeitet äußerst akribisch und blickt durch das Stellen kritischer Fragen auch über
+                  den Tellerrand hinaus. Genau so stellen wir uns eine professionelle Zusammenarbeit vor. Klare
+                  Empfehlung!</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="clients__author">
+                  <img src="./img/clients-author.png" alt="">
+                </div>
+                <div class="clients__author_name">Michael Gobran</div>
+                <div class="clients__google_icon">
+                  <img src="./img/google.svg" alt="">
+                </div>
+                <div class="clients__google_rating">5.0</div>
+                <div class="clients__google_stars">
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                  <i class="icon-icon-star"></i>
+                </div>
+                <div class="clients__text">Die Zusammenarbeit mit Golden Web Age war bislang immer von Erfolg
+                  gekrönt. Das Team arbeitet äußerst akribisch und blickt durch das Stellen kritischer Fragen auch über
+                  den Tellerrand hinaus. Genau so stellen wir uns eine professionelle Zusammenarbeit vor. Klare
+                  Empfehlung!</div>
+              </div>
 
-  <section class="callback-banner" data-aos="fade-in">
-    <div class="callback-banner__container">
-      <div class="callback-banner__title heading-4">Interested in Our Services? Contact Us!</div>
-      <button class="btn btn-secondary callback-banner__btn modalTrigger" data-modal="#callbackModal">Contact Us</button>
-    </div>
-  </section>
-</main>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="clients-logos" data-aos="fade-in">
+      <div class="container">
+        <div class="row align-center">
+          <div class="col-lg-10 col-xs-12">
+            <div class="clients-logos__list">
+              <div class="clients-logos__item">
+                <img src="./img/clients1.svg" alt="">
+              </div>
+              <div class="clients-logos__item">
+                <img src="./img/clients2.svg" alt="">
+              </div>
+              <div class="clients-logos__item">
+                <img src="./img/clients3.svg" alt="">
+              </div>
+              <div class="clients-logos__item">
+                <img src="./img/clients4.svg" alt="">
+              </div>
+              <div class="clients-logos__item">
+                <img src="./img/clients5.svg" alt="">
+              </div>
+              <div class="clients-logos__item">
+                <img src="./img/clients6.svg" alt="">
+              </div>
+              <div class="clients-logos__item">
+                <img src="./img/clients7.svg" alt="">
+              </div>
+              <div class="clients-logos__item">
+                <img src="./img/clients8.svg" alt="">
+              </div>
+              <div class="clients-logos__item">
+                <img src="./img/clients9.svg" alt="">
+              </div>
+              <div class="clients-logos__item">
+                <img src="./img/clients10.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-  window.onload = function () {
-    document.querySelector('.home-link').classList.add('active');
-  };
-</script>
-@@include('_footer.html')
+    <section class="callback-banner" data-aos="fade-in">
+      <div class="callback-banner__container">
+        <div class="callback-banner__title heading-4">Interested in Our Services? Contact Us!</div>
+        <button class="btn btn-secondary callback-banner__btn modalTrigger" data-modal="#callbackModal">Contact
+          Us</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.onload = function () {
+      document.querySelector('.home-link').classList.add('active');
+    };
+  </script>
+  @@include('_footer.html')

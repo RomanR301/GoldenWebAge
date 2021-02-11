@@ -1,1 +1,9 @@
-<svg width="110" height="113" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40.5" cy="42.5" r="39.5" stroke="#D4B982" stroke-width="2"/><path stroke="#D4B982" stroke-width="2" d="M68.708 71.294l40.3 40.31M0 39.893h13.285L40.57 67 107 1"/><circle cx="64" cy="44" r="2" fill="#D4B982"/><circle cx="88" cy="20" r="2" fill="#D4B982"/><circle cx="41" cy="67" r="2" fill="#D4B982"/><circle cx="14" cy="41" r="2" fill="#D4B982"/></svg>
+<svg width="110" height="113" viewBox="0 0 110 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="40.5" cy="42.5" r="39.5" stroke="#D4B982" stroke-width="2"/>
+<line y1="-1" x2="57" y2="-1" transform="matrix(0.707013 0.7072 -0.707013 0.7072 68 72)" stroke="#D4B982" stroke-width="2"/>
+<path d="M0 39.8929H13.2854L40.5694 67L107 1" stroke="#D4B982" stroke-width="2"/>
+<circle cx="64" cy="44" r="2" fill="#D4B982"/>
+<circle cx="88" cy="20" r="2" fill="#D4B982"/>
+<circle cx="41" cy="67" r="2" fill="#D4B982"/>
+<circle cx="14" cy="41" r="2" fill="#D4B982"/>
+</svg>

@@ -1,2 +1,119 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+
+.page-about, .page-home {
+  overflow-x: hidden;
+}
+
+.page-about {
+  & .main-screen__image {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: inset 0px 4px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.main-screen {
+  height: calc(100vh - 20px);
+  position: relative;
+  z-index: 2;
+  @media (max-width: $breakpoint-xl) {
+    height: auto;
+    padding-top: 20px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 24px;
+  }
+  & .container, & .row {
+    height: 100%;
+  }
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @media (max-width: $breakpoint-xl) {
+      display: none;
+    }
+    & img {
+      height: 100%;
+    }
+  }
+  &__text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: $breakpoint-xl) {
+      margin-bottom: 20px;
+    }
+  }
+  &__subtitle {
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 50px;
+    color: $goldenColor;
+    white-space: nowrap;
+    margin-bottom: 26px;
+    @media (max-width: $breakpoint-xxl) {
+      white-space: unset;
+    }
+    @media (max-width: $breakpoint-xl) {
+      font-size: 40px;
+    }
+    @media (max-width: $breakpoint-md) {
+      font-size: 25px;
+    }
+  }
+  &__description {
+    width: 63%;
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+  &__image {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;  
+    & .main-image {
+      @include defaultIcon(contain);
+      object-position: 0 70%;
+      @media (max-width: $breakpoint-xl) {
+        width: 100%;
+        margin: 0 auto;
+      }
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+        
+      }
+    }
+    & .main-image {
+      object-position: unset;
+    }
+  }
+}
+
+.main-screen .rellax {
+  @media (max-width: $breakpoint-lg) {
+    transform: none!important;
+  }
+}
+
+
+.golden-filter {
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(212, 185, 130, 0.4);
+  }
+}

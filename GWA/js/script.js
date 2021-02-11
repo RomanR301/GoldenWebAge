@@ -234,6 +234,7 @@ $('.perfomance__total').each(function () {
 });
 
 var rellax = new Rellax('.rellax', {
+  breakpoints:[576, 768, 1201]
   // speed: 1,
   // center: false,
   // wrapper: null,

@@ -136,16 +136,16 @@ function jsLibs() {
 
 function images() {
   return src(path.src.img)
-    .pipe(
-      imagemin({
-        progressive: true,
-        svgoPlugins: [
-          {removeViewBox: false}
-        ],
-        interlaced: true,
-        optimizationLevel: 6
-      })
-    )
+    // .pipe(
+    //   imagemin({
+    //     progressive: true,
+    //     svgoPlugins: [
+    //       {removeViewBox: false}
+    //     ],
+    //     interlaced: true,
+    //     optimizationLevel: 6
+    //   })
+    // )
     .pipe(dest(path.build.img))
     .pipe(browsersync.stream())
 }

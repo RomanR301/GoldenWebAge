@@ -69,11 +69,10 @@
     @media (max-width: $breakpoint-md) {
       width: 320px;
       margin: 0 auto;
-      // padding: 90px 0 120px 0;
       padding: 0;
       margin: 90px auto 120px auto;
     }
-    & .main-screen-phone {
+    & .hero-screen-phone, & .hero-image {
       @include defaultIcon(contain);
       object-position: 0 70%;
       @media (max-width: $breakpoint-xl) {
@@ -86,7 +85,10 @@
         
       }
     }
-    & .main-screen-circle {
+    & .hero-image {
+      object-position: unset;
+    }
+    & .hero-screen-circle {
       position: absolute;
       right: 14%;
       top: 14%;
@@ -419,7 +421,7 @@
   }
 }
 
-.why-us {
+.home-why-us {
   margin-bottom: 150px;
   position: relative;
   @media (max-width: $breakpoint-lg) {
