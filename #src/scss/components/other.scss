@@ -16,16 +16,11 @@
   }
 }
 
-.page-services {
-  & .main-screen__image {
-    margin-top: 160px;
-    @media (max-width: $breakpoint-xl) {
-      width: 440px;
-      margin: 0 auto;
-    }
-    @media (max-width: 500px) {
-      width: 120%;
-      margin-left: -10%;
+.page-single-services {
+  & .main-screen {
+    padding-top: 130px;
+    @media (max-width: $breakpoint-lg) {
+      padding-top: 30px;
     }
   }
 }
@@ -142,13 +137,12 @@
 }
 
 .breadcrumbs {
-  position: absolute;
   display: flex;
-  top: 190px;
-  left: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
   @media (max-width: $breakpoint-xl) {
     position: static;
-    margin: 20px;
+    margin-bottom: 20px;
   }
   & li {
     display: flex;

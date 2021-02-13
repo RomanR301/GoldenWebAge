@@ -27,3 +27,8 @@ body.active {
     display: none;
   }
 }
+.hidden-lg {
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+  }
+}

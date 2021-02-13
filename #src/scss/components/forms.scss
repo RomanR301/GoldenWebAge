@@ -15,13 +15,15 @@
     & label {
       color: $greyColor;
     }
-    & strong {
+    & a {
+      font-weight: 700;
       color: $greyColor;
     }
   }
   &.form-submit {
     & .btn {
       border-radius: 20px;
+      padding: 15px 24px;
       outline: none;
     }
   }

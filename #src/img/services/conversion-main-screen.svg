@@ -1,0 +1,17 @@
+<svg width="597" height="699" viewBox="0 0 597 699" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="274.5" cy="213.5" r="95.5" stroke="#D4B982" stroke-width="2"/>
+<circle cx="487.5" cy="213.5" r="58.5" stroke="#D4B982" stroke-width="2"/>
+<rect x="79" y="99" width="66" height="171" rx="4" fill="white" stroke="#D4B982" stroke-width="2"/>
+<rect x="145" y="38" width="66" height="232" rx="4" fill="white" stroke="#D4B982" stroke-width="2"/>
+<rect x="276" y="1" width="66" height="269" rx="4" fill="white" stroke="#D4B982" stroke-width="2"/>
+<rect x="342" y="99" width="66" height="171" rx="4" fill="white" stroke="#D4B982" stroke-width="2"/>
+<rect x="407" y="60" width="66" height="210" rx="4" fill="white" stroke="#D4B982" stroke-width="2"/>
+<path d="M248.295 567.146L1 299.955V244C1 241.239 3.23858 239 6 239H591C593.761 239 596 241.239 596 244V299.955L348.002 567.145C347.144 568.07 346.667 569.285 346.667 570.547V690.342C346.667 694.191 342.501 696.596 339.168 694.673L252.126 644.449C250.578 643.556 249.625 641.905 249.625 640.119V570.543C249.625 569.283 249.15 568.071 248.295 567.146Z" fill="white"/>
+<path d="M1 299.955L248.295 567.146C249.15 568.071 249.625 569.283 249.625 570.543V640.119C249.625 641.905 250.578 643.556 252.126 644.449L339.168 694.673C342.501 696.596 346.667 694.191 346.667 690.342V570.547C346.667 569.285 347.144 568.07 348.002 567.145L596 299.955M1 299.955H596M1 299.955V244C1 241.239 3.23858 239 6 239H591C593.761 239 596 241.239 596 244V299.955" stroke="#D4B982" stroke-width="2"/>
+<line x1="70" y1="376" x2="527" y2="376" stroke="#D4B982" stroke-width="2"/>
+<line x1="142" y1="453" x2="454" y2="453" stroke="#D4B982" stroke-width="2"/>
+<line x1="216" y1="533" x2="381" y2="533" stroke="#D4B982" stroke-width="2"/>
+<line x1="473.293" y1="236.293" x2="532.293" y2="177.293" stroke="#D4B982" stroke-width="2"/>
+<line x1="276.347" y1="237.758" x2="211.347" y2="181.758" stroke="#D4B982" stroke-width="2"/>
+<line x1="276.038" y1="239.274" x2="243.038" y2="123.274" stroke="#D4B982" stroke-width="2"/>
+</svg>

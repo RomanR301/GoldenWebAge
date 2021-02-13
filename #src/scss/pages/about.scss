@@ -56,8 +56,8 @@
   }
   &-item {
     padding: 40px;
-    background: #FFFFFF;
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    // background: #FFFFFF;
+    // box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     @include transition(.3);
     @media (max-width: 1400px) {
@@ -67,10 +67,7 @@
       padding: 30px 15px;
     }
     &:hover {
-      transform: translate(10px,-10px);
-      @media (max-width: $breakpoint-lg) {
-        transform: translate(0,0);
-      }
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
     }
   }
   &__image {
@@ -170,6 +167,13 @@
       border-radius: 30px;
       overflow: hidden;
       display: block;
+      @include transition(.3);
+      &:hover {
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        & .arrow-link:after {
+          transform: translate(10px,0);
+        }
+      }
       @media (max-width: $breakpoint-lg) {
         height: 300px;
       }
@@ -251,6 +255,7 @@
     @include transition(.3);
     background: #FFFFFF;
     border-radius: 30px;
+    height: 100%;
     @media (max-width: $breakpoint-xl) {
       padding: 20px;
     }

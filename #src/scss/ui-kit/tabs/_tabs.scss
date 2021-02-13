@@ -1,52 +1,70 @@
 .tabs { 
-  & .row {
-    width: 100%;
-    &.w-100 {
-      @media (max-width: $breakpoint-md) {
-        flex-direction: column-reverse;
-      }
-    }
-  }
   &-list {
+    margin-bottom: 65px;
     display: flex;
-    max-width: 70%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     @media (max-width: $breakpoint-lg) {
       max-width: 100%;
     }
     &__item {
+      padding: 0 20px;
+      width: 25%;
       &_link {
-        margin: 3px;
-        display: block;
-        &.btn-primary {
-          @include transition(0.3);
-          background: $whiteColor;
-          // color: $defaultText;
-          cursor: pointer;
-          @media (max-width: $breakpoint-md) {
-            padding: 4px 12px;
+        border-radius: 30px;
+        display: flex;
+        height: 220px;
+        padding: 50px 30px;
+        position: relative;
+        align-items: center;
+        @include transition(.3);
+        cursor: pointer;
+        overflow: hidden;
+        @media (max-width: 1600px) {
+          height: 180px;
+          padding: 40px 25px;
+        }
+        @media (max-width: $breakpoint-xl) {
+          align-items: center;
+          justify-content: center;
+        }
+        &:hover {
+          box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        &.active {
+          box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+          & .process__description {
+            // font-size: 30px;
+            // line-height: 40px;
+            // font-weight: bold;
           }
-          &:hover {
-            // background: $defaultText;
-            color: $whiteColor;
+          &:before {
+            opacity: 1;
+            width: 100%;
           }
-          &.active {
-            // background: $defaultText;
-            color: $whiteColor;
+          & .process__number:before {
+            color: $goldenColor;
           }
+        }
+        &:before {
+          content: '';
+          background: $goldenColor;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 12px;
+          z-index: 2;
+          opacity: 0;
+          @include transition(.3);
         }
       }
     }
   }
 
   &-wrap {
-    width: 100%;
-    padding-top: 35px;
-    // overflow: hidden;
-    @media (max-width: $breakpoint-lg) {
-      max-width: unset;
-    }
+    margin: 0 20px;
     .tab-content {
+      width: 75%;
       display: none;
       animation: fadeEffect .5s;
       -webkit-animation: fadeEffect .5s;

@@ -34,27 +34,35 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-icon-arrow-bottom:before {
+.icon-icon-instagram:before {
   content: "\e900";
-  color: #5c5c5c;
+  color: #fff;
 }
-.icon-icon-arrow-left-big:before {
+.icon-icon-twitter:before {
   content: "\e901";
-  color: #d4b982;
+  color: #fff;
 }
-.icon-icon-arrow-right:before {
+.icon-icon-star:before {
   content: "\e902";
-  color: #d4b982;
+  color: #fbbc05;
 }
 .icon-icon-arrow-top:before {
   content: "\e903";
   color: #00cd98;
 }
-.icon-icon-checkmark:before {
+.icon-icon-arrow-right:before {
   content: "\e904";
   color: #d4b982;
 }
-.icon-icon-facebook:before {
+.icon-icon-arrow-bottom:before {
+  content: "\e905";
+  color: #5c5c5c;
+}
+.icon-icon-checkmark:before {
+  content: "\e906";
+  color: #d4b982;
+}
+.icon-icon-arrow-left-big:before {
   content: "\e907";
   color: #d4b982;
 }
@@ -62,15 +70,7 @@
   content: "\e908";
   color: #d4b982;
 }
-.icon-icon-instagram:before {
+.icon-icon-facebook:before {
   content: "\e909";
-  color: #fff;
-}
-.icon-icon-star:before {
-  content: "\e90a";
-  color: #fbbc05;
-}
-.icon-icon-twitter:before {
-  content: "\e90b";
   color: #fff;
 }
