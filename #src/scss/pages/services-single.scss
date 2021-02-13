@@ -12,6 +12,11 @@
     &__title {
       width: 55%;
       margin-bottom: 30px;
+      @media (min-width:2000px) {
+        & .section-title {
+          font-size: 140px;
+        }
+      }
       @media (max-width:$breakpoint-xl) {
         & .section-title {
           font-size: 75px;

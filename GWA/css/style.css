@@ -5144,6 +5144,10 @@ button.swiper-pagination-bullet {
   .frame__search {
     top: 20%;
   }
+
+  .single-services-hero__title .section-title {
+    font-size: 140px;
+  }
 }
 
 @media (min-width: 2200px) {
