@@ -61,11 +61,14 @@
 
 
 .section-title {
-  @include fontSize(60, 133);
+  @include fontSize(60, 100);
   line-height: 1;
   font-weight: 700;
   color: $greyColor;
   text-transform: uppercase;
+  @media (min-width: 2560px) {
+    font-size: 100px!important;
+  }
   & span {
     color: $goldenColor;
     font-weight: 700;

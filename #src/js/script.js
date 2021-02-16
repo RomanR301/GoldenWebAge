@@ -9,6 +9,7 @@ let front = {
         slidesPerView: 'auto',
         loop: true,
         centeredSlides: true,
+        autoHeight: true, //enable auto height
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',

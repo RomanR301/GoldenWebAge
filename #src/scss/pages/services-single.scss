@@ -14,9 +14,14 @@
       margin-bottom: 30px;
       @media (min-width:2000px) {
         & .section-title {
-          font-size: 140px;
+          font-size: 130px;
         }
       }
+      // @media (min-width:2560px) {
+      //   & .section-title {
+      //     font-size: 100px;
+      //   }
+      // }
       @media (max-width:$breakpoint-xl) {
         & .section-title {
           font-size: 75px;

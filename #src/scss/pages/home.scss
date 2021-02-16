@@ -402,6 +402,13 @@
     }
     &:hover {
       box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+      & .arrow-link {
+        color: $goldenColor2;
+        &:after {
+          transform: translate(10px,0);
+          color: $goldenColor2;
+        }
+      }
     }
     &__image {
       height: 100px;
