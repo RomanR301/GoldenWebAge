@@ -1,5 +1,5 @@
 <?php
-$to      = 'roman.orangeorange@gmail.com';
+$to      = 'info@goldenwebage.de';
 $subject = 'GoldenWebAge';
 $useremail = $_POST['callback_email'];
 $username = $_POST['callback_name'];
