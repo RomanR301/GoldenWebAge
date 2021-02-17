@@ -6,7 +6,11 @@
     margin: 180px 0 230px 0;
     position: relative;
     z-index: 2;
-    overflow-x: hidden;
+    overflow-x: hidden; 
+    @media (max-width: $breakpoint-xl) {
+      padding: 100px 0;
+      margin: 40px 0;
+    }
     @media (max-width: $breakpoint-lg) {
       margin: 40px 0 60px 0;
     }
@@ -41,6 +45,7 @@
     background-image: url('../../img/thick-lines-white.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
     @media (max-width: 1600px) {
       width: 45vw;
     }
@@ -74,7 +79,8 @@
     }
     &_inner {
       width: 540px;
-      padding: 110px 0 110px 60px;
+      height: 100%;
+      padding: 90px 0 80px 60px;
       @media (max-width: 1400px) {
         width: 100%;
         padding: 70px 40px;

@@ -141,7 +141,8 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
+  // top: 50%;
+  top: 200px;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
@@ -154,15 +155,6 @@
   @include transition (.3);
   &:hover {
     color: $goldenColor2;
-  }
-  @media (max-width: $breakpoint-xl) {
-    top: 40%;
-  }
-  @media (max-width: $breakpoint-lg) {
-    top: 35%;
-  }
-  @media (max-width: 450px) {
-    top: 27%;
   }
 }
 .swiper-button-prev.swiper-button-disabled,
