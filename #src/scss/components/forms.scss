@@ -91,8 +91,8 @@ input[type="checkbox"]:checked + label:before {
   left: 5px;
   border-radius: 0;
   opacity: 1;
-  border-top-color: transparent;
-  border-left-color: transparent;
+  border-top-color: transparent!important;
+  border-left-color: transparent!important;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }

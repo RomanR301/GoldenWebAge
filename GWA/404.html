@@ -73,7 +73,7 @@
               <a href="#">Blog</a>
             </li>
             <li class="menu-item">
-              <a href="#">Contact Us</a>
+              <a class="contact-us-link" href="contact-us.html">Contact Us</a>
             </li>
           </ul>
           <div class="navbar-contacts">
@@ -198,9 +198,9 @@
       </div>
       <div class="modal__heading">Contact Us</div>
       <div class="modal__form">
-        <form action="">
+        <form action="sendEmail.php" method="POST">
           <div class="form-control">
-            <input type="text" name="callback_email" placeholder="Name" required>
+            <input type="text" name="callback_name" placeholder="Name" required>
           </div>
           <div class="form-control">
             <input type="email" name="callback_email" placeholder="Email" required>

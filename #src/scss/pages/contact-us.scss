@@ -1,0 +1,161 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.contact-hero{
+  &-screen {
+    margin: 180px 0 230px 0;
+    position: relative;
+    z-index: 2;
+    overflow-x: hidden;
+    @media (max-width: $breakpoint-lg) {
+      margin: 40px 0 60px 0;
+    }
+    & .section-title {
+      margin-bottom: 20px;
+    }
+  }
+  & .container, & .row {
+    height: 100%;
+  }
+  &__container {
+    margin: 0 20px;
+    @media (max-width: $breakpoint-xl) {
+      margin: 0 15px;
+    }
+  }
+  &__title {
+    width: 35%;
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+    }
+  }
+  &__form {
+    position: absolute;
+    right: inherit;
+    top: 0;
+    right: 0;
+    background: $goldenColor;
+    width: 55vw;
+    height: fit-content;
+    border-radius: 30px 0px 0px 30px;
+    background-image: url('../../img/thick-lines-white.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: 1600px) {
+      width: 45vw;
+    }
+    @media (max-width: 1400px) {
+      width: 40vw;
+    }
+    @media (max-width: $breakpoint-lg) {
+      width: calc(100% + 60px);
+      margin: 0 -30px;
+      position: static;
+      border-radius: 0;
+      transform: none!important;
+      opacity: 1!important;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: calc(100% + 30px);
+      margin: 0 -15px;
+    }
+    &_additional {
+      margin-bottom: 75px;
+      & * {
+        color: $whiteColor;
+        font-style: normal;
+      }
+      & p {
+        margin-bottom: 0;
+      }
+      .contact-component__socials {
+        margin: 25px 0;
+      }
+    }
+    &_inner {
+      width: 540px;
+      padding: 110px 0 110px 60px;
+      @media (max-width: 1400px) {
+        width: 100%;
+        padding: 70px 40px;
+      }
+      @media (max-width: $breakpoint-md) {
+        padding: 60px 20px;
+      }
+    }
+    & .contact-component__form {
+      margin: 0;
+      .form-control.form-checkbox label {
+        color: $whiteColor;
+        & a {
+          color: $whiteColor;
+        }
+      }
+      input[type=checkbox]+label:before {
+        border: 2px solid $whiteColor;
+      }
+    }
+  }
+}
+
+
+.contact-person {
+  display: flex;
+  margin-bottom: 50px;
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  &__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 30px;
+    @media (max-width: $breakpoint-sm) {
+      margin: 0 0 15px 0;
+    }
+    & img {
+      @include defaultIcon(cover);
+    }
+  }
+  &__text {
+    color: #8C8C8C;
+    font-weight: 500;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 1.4;
+    color: #292620;
+    @media (max-width: 1200px) {
+      font-size: 35px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      font-size: 45px;
+    }
+  }
+  &__position {
+    color: #8C8C8C;
+  }
+  &__benefits {
+    margin-left: 40px;
+    @media (max-width: $breakpoint-lg) {
+      margin: 0;
+    }
+    & li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      @media (max-width: $breakpoint-sm) {
+        margin-bottom: 30px;
+      }
+      &:before {
+        font-family: 'icomoon'!important;
+        margin-right: 20px;
+        content: "\e906";
+        color: #d4b982;
+      }
+    }
+  }
+}
