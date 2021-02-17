@@ -15,6 +15,9 @@
       @media (min-width:2000px) {
         & .section-title {
           font-size: 130px;
+          &.seo-title {
+            font-size: 100px;
+          }
         }
       }
       // @media (min-width:2560px) {
