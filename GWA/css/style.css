@@ -3825,10 +3825,6 @@ button.swiper-pagination-bullet {
   margin-bottom: 150px;
 }
 
-.projects-list {
-  margin-top: -45px;
-}
-
 .projects-item {
   margin-bottom: 30px;
 }
@@ -6252,10 +6248,6 @@ button.swiper-pagination-bullet {
 
   .we-provide__title .golden2 {
     font-size: 50px;
-  }
-
-  .projects-list {
-    margin: -35px 15px 0 15px;
   }
 
   .home-why-us__image {
