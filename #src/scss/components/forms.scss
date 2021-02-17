@@ -41,6 +41,7 @@
     font-size: 20px;
     line-height: 24px;
     padding: 16px 24px;
+    @include transition(.3);
     &::placeholder  {
       color: $greyColor;
     }
@@ -49,6 +50,7 @@
     }
     &:focus {
       outline:none;
+      box-shadow: 0 0 0 0.25rem rgba(212, 185, 130, .50%)
     }
   }
 }
