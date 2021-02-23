@@ -16,7 +16,7 @@
   @include transition(.3);
   padding: 40px 20px 20px 20px;
   z-index: 2002;
-  @media (min-width: 1800px) {
+  @media (min-width: 1900px) {
     & .container {
       padding: 0;
     }
@@ -57,8 +57,14 @@
     @media (max-width: $breakpoint-xl) {
       margin: 0 10px 0 auto;
     }
+    @media (max-width: $breakpoint-sm) {
+      margin: 0 5px 0 auto;
+      padding: 10px 16px;
+    }
     @media (max-width: 360px) {
-      padding: 12px 20px;
+      margin: 0 5px 0 auto;
+      padding: 8px 10px;
+      font-size: 14px;
     }
   }
 }
@@ -106,6 +112,9 @@
     }
     @media (max-width: 1400px) {
       margin-right: 35px;
+    }
+    @media (max-width: 1300px) {
+      margin-right: 25px;
     }
     @media (max-width: $breakpoint-xl) {
       margin: 0 0 15px 0;
@@ -163,6 +172,9 @@
   }
   @media (max-width: 1400px) {
     margin-right: 55px;
+  }
+  @media (max-width: 1300px) {
+    margin-right: 45px;
   }
   @media (max-width: $breakpoint-xl) {
     // display: flex;
@@ -248,20 +260,20 @@
     @include transition(.3);
   }
   & span:nth-child(1) {
-    top: calc(50% - 8.5px);
+    top: calc(50% - 6px);
   }
   & span:nth-child(2) {
-    top: calc(50% - 2.5px);
+    top: calc(50% - 0px);
   }
   & span:nth-child(3) {
-    top: calc(50% - 2.5px);
+    top: calc(50% - 0px);
   }
   & span:nth-child(4) {
-    top: calc(50% + 3.5px);
+    top: calc(50% + 6px);
   }
   &.open {
     & span:nth-child(1) {
-      top: calc(50% - 2.5px);
+      top: calc(50% - 0px);
       width: 0%;
       right: 50%;
     }
@@ -272,7 +284,7 @@
       transform: rotate(-45deg);
     }
     & span:nth-child(4) {
-      top: calc(50% - 2.5px);
+      top: calc(50% - 0px);
       width: 0;
       right: 50%;
     }
