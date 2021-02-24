@@ -42,7 +42,7 @@
   align-items: center;
   color: $goldenColor;
   font-weight: 700;
-  @include transition(.3);
+  transition: all .3s ease-in-out!important;
   position: relative;
   &:after {
     font-family: 'icomoon';
