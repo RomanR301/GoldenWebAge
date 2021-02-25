@@ -4996,7 +4996,7 @@ button.swiper-pagination-bullet {
 
 .other-page {
   height: 100vh;
-  background-image: url("../../img/thick-lines-golden.svg");
+  background-image: url("../img/thick-lines-golden.svg");
   background-size: cover;
   background-repeat: no-repeat;
 }
