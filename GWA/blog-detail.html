@@ -311,12 +311,12 @@
     <div class="callback-banner__container">
       <div class="callback-banner__title heading-4">Subscribe to our newslatter for interesting articles</div>
       <div class="newsletter__inner">
-        <form action="">
-          <div class="form-control">
-            <input type="email" name="" id="" placeholder="Your Email" required>
+        <form action="sendEmail.php" method="GET" class="needs-validation" novalidate>
+          <div class="form-group">
+            <input type="email" name="" class="form-control" id="" placeholder="Your Email" required>
             <button type="submit" class="btn btn-secondary">Subscribe</button>
           </div>
-          <div class="form-control form-checkbox">
+          <div class="form-group form-checkbox">
             <input type="checkbox" id="contact-checkbox">
             <label for="contact-checkbox">Ich habe die <a href="#">Datenschutzerklärung</a> zur Kenntnis genommen. Ich
               stimme zu, dass meine
