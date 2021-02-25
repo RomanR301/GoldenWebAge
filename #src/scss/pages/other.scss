@@ -48,3 +48,16 @@
     }
   }
 }
+
+.error-page {
+  & h1 {
+    font-size: 320px;
+    line-height: 1;
+    @media (max-width: $breakpoint-xl) {
+      font-size: 240px;
+    }
+    @media (max-width: $breakpoint-md) {
+      font-size: 160px;
+    }
+  }
+}

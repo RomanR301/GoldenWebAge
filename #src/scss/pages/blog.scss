@@ -1,2 +1,489 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+
+.page-blog {
+  & .main-screen {
+    height: auto;
+    margin-top: 190px;
+    margin-bottom: 40px;
+    @media (max-width: $breakpoint-lg) {
+      margin: 0;
+    }
+  }
+}
+
+.blog {
+  &-list {
+    & .row {
+      // flex-direction: row-reverse;
+    }
+    & .col-lg-6 {
+      margin-bottom: 80px;
+      @media (max-width: 1500px) {
+        margin-bottom: 40px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        margin-bottom: 30px;
+        // transform: unset!important;
+        // opacity: 1!important;
+      }
+      &:nth-child(odd) {
+        padding-right: 40px;
+        @media (max-width: 1500px) {
+          padding-right: 20px;
+        }
+        @media (max-width: $breakpoint-lg) {
+          padding: 0;
+        }
+      }
+      &:nth-child(even) {
+        padding-left: 40px;
+        margin-top: -250px;
+        @media (max-width: 1500px) {
+          padding-left: 20px;
+        }
+        @media (max-width: $breakpoint-lg) {
+          padding: 0;
+          margin-top: 0;
+        }
+      }
+      &:last-child {
+        margin-left: auto;
+        margin-top: -250px;
+        padding-left: 40px;
+        padding-right: 0;
+        @media (max-width: 1500px) {
+          padding-right: 0;
+          padding-left: 20px;
+        }
+        @media (max-width: $breakpoint-lg) {
+          padding: 0;
+          margin: 0;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    @include transition(.3);
+    @media (max-width: 1500px) {
+      height: 600px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      height: auto;
+    }
+    &_image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      & img {
+        @include defaultIcon(cover);
+      }
+    }
+    &:before {
+      z-index: 2;
+      @include transition(.3);
+      background: rgba(212, 185, 130, 0.8);
+    }
+    &:hover {
+      box-shadow: 0px 30px 100px rgba(0, 0, 0, 0.3);
+      &:before {
+        background: rgba(212, 185, 130, 0.7);
+      }
+      & .arrow-link {
+        color: $whiteColor;
+        &:after {
+          transform: translate(10px,0);
+          color: $whiteColor;
+        }
+      } 
+    }
+    &_content {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 50px 40px;
+      @media (max-width: 1500px) {
+        padding: 40px 30px;
+      }
+      @media (max-width: $breakpoint-md) {
+        padding: 30px 15px;
+      }
+    }
+
+    &_title {
+      font-weight: 500;
+      font-size: 60px;
+      line-height: 1.1;
+      color: $whiteColor;
+      @media (max-width: 1500px) {
+        font-size: 40px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        font-size: 30px;
+      }
+    }
+
+    &_footer {
+      display: flex;
+      justify-content: space-between;
+      color: $whiteColor;
+      @media (max-width: 1500px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &_date {
+      color: $whiteColor;
+      @media (max-width: 1500px) {
+        margin-bottom: 40px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        margin: 15px 0 60px 0;
+      }
+    }
+    .arrow-link {
+      color: $whiteColor;
+      &:after {
+        color: $whiteColor;
+      }
+    }
+  }
+}
+
+.page-blog-detail {
+  & .main-screen {
+    height: auto;
+    margin-top: 190px;
+    @media (max-width: $breakpoint-xl) {
+      margin: 0;
+    }
+    & h1 {
+      font-weight: 300;
+      font-size: 100px;
+      line-height: 1.1;
+      color: $goldenColor;
+      margin-bottom: 30px;  
+      @media (max-width: $breakpoint-xl) {
+        font-size: 70px;
+        margin-bottom: 15px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        font-size: 50px;
+      }
+      @media (max-width: $breakpoint-md) {
+        font-size: 35px;
+      }
+    }
+    & p {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 36px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.blog-detail {
+  & .parallax {
+    height: 540px;
+    @media (max-width: $breakpoint-xl) {
+      transform: unset!important;
+    }
+    @media (max-width: $breakpoint-lg) {
+      height: 350px;
+      margin-bottom: 90px;
+    }
+    &:before {
+      background: rgba(212, 185, 130, 0.8);
+    }
+  }
+  ul {
+    margin: 4px 0 30px 0;
+    li {
+      display: flex;
+      align-items: flex-start;
+      &:before {
+        content: '';
+        display: block;
+        width: 8px;
+        min-width: 8px;
+        height: 8px;
+        min-height: 8px;
+        margin: 12px 10px 0 0;
+        background: $goldenColor;
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+.blog-detail {
+  & .column {
+    @media (max-width: $breakpoint-lg) {
+      padding: 0;
+    }
+  }
+}
+.blog-detail__content {
+  padding-right: 100px;
+  @media (max-width: 1400px) {
+    padding-right: 50px;
+  }
+  @media (max-width: $breakpoint-lg) {
+    padding-right: 0; 
+  }
+  & h2, & h3 {
+    margin: 30px 0 10px 0;
+  }
+}
+.blog-detail__sidebar {
+  & .sidebar__author {
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+}
+
+.sidebar__author {
+  background: rgba(212, 185, 130, .3);
+  border-radius: 20px;
+  position: relative;
+  padding: 30px 45px 40px 60px;
+  margin-bottom: 80px;
+  @media (max-width: $breakpoint-xl) {
+    margin-bottom: 40px;
+    padding: 20px 25px 20px 40px;
+  }
+  @media (max-width: $breakpoint-lg) {
+    margin: 0 25px 30px 25px;
+  }
+  @media (max-width: $breakpoint-md) {
+    margin: 0 0 30px 0;
+    padding: 30px 15px 20px 15px;
+  }
+  &_image {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    position: absolute;
+    left: -70px;
+    top: -90px;
+    border: 15px solid $whiteColor;
+    overflow: hidden;
+    & img {
+      @include defaultIcon(cover);
+    }
+    @media (max-width: $breakpoint-lg) {
+      width: 160px;
+      height: 160px;
+      left: -60px;
+      top: -80px;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 85px;
+      height: 85px;
+      top: -35px;
+      left: -15px;
+      border: 6px solid $whiteColor;
+    }
+  }
+  &_title {
+    margin-left: 80px;
+    @media (max-width: $breakpoint-md) {
+      margin: 0;
+    }
+    & span {
+      font-size: 16px;
+      line-height: 24px;
+      color: #5C5C5C;
+      @media (max-width: $breakpoint-md) {
+        margin-left: 80px;
+        margin-bottom: 10px;
+      }
+    }
+    & p {
+      font-weight: 500;
+      font-size: 45px;
+      line-height: 50px;
+      margin-bottom: 30px;
+      @media (max-width: $breakpoint-md) {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.sidebar__socials {
+  background: rgba(212, 185, 130, .3);
+  border-radius: 20px;
+  position: relative;
+  padding: 40px 40px 54px 40px;
+  margin-bottom: 74px;
+  @media (max-width: $breakpoint-xl) {
+    margin-bottom: 40px;
+    padding: 30px;
+  }
+  @media (max-width: $breakpoint-md) {
+    padding: 30px 30px 0 30px;
+  }
+  &_image {
+    position: absolute;
+    right: 60px;
+    top: -30px;
+    & img {
+      @include defaultIcon(contain);
+    }
+    @media (max-width: 1500px) {
+      width: 120px;
+      right: 30px;
+    }
+    @media (max-width: $breakpoint-xl) {
+      display: none;
+    }
+  }
+  &_inner {
+    display: flex;
+    flex-direction: column;
+    & h4 {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 1.3;
+      color: $goldenColor;
+    }
+    & p {
+      margin-bottom: 20px;
+    } 
+  }
+  & .socials__list {
+    display: flex;
+    align-items: center;
+    @media (max-width: $breakpoint-md) {
+      flex-wrap: wrap;
+    }
+    & a {
+      display: block;
+      margin-right: 24px;
+      @include transition(.3);
+      @media (max-width: $breakpoint-md) {
+        margin: 0 40px 30px 0;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.sidebar__recommendations {
+  & .heading-4 {
+    @media (max-width: $breakpoint-lg) {
+      font-size: 30px;
+    }
+  }
+  & .row {
+    @media (max-width: $breakpoint-xl) {
+      margin: 0;
+    }
+  }
+  & .col-xs-12 {
+    padding: 0;
+    margin-bottom: 30px;
+    & .blog__item_title {
+      font-size: 45px;
+      @media (max-width: $breakpoint-xl) {
+        font-size: 35px;
+      }
+    }
+    & .blog__item {
+      height: 450px;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.newsletter {
+  &__inner {
+    width: 640px;
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+    }
+    & input {
+      padding-right: 170px;
+      border-color: $whiteColor;
+      color: $whiteColor;
+      @media (max-width: $breakpoint-lg) {
+        padding-right: 20px;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, .30%)
+      }
+      &::placeholder {
+        color: $whiteColor;
+      }
+      &::-moz-placeholder {
+        color: $whiteColor;
+      }
+    }
+    & .form-group {
+      position: relative;
+      & .btn {
+        @media (max-width: $breakpoint-lg) {
+          display: none;
+        }
+      }
+    }
+    & .btn {
+      position: absolute;
+      height: calc(100% - 10px);
+      top: 5px;
+      right: 5px;
+      @media (max-width: $breakpoint-lg) {
+        position: static;
+        height: auto;
+      }
+    }
+    & .form-checkbox {
+      max-width: 80%;
+      @media (max-width: $breakpoint-lg) {
+        max-width: 100%;
+      }
+      input[type=checkbox]+label:before {
+        border: 2px solid #fff;
+      }
+      input[type="checkbox"]:checked + label:before {
+        border-top-color: transparent;
+        border-left-color: transparent;
+      }
+      & label {
+        color: $whiteColor;
+        @media (max-width: $breakpoint-md) {
+          font-size: 16px;
+        }
+        & a {
+          color: $whiteColor;
+          border-bottom: 2px solid $whiteColor;
+          @include transition(.3);
+          &:hover {
+            border-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+

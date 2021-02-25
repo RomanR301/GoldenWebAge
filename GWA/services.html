@@ -355,22 +355,26 @@
       </div>
       <div class="modal__heading">Contact Us</div>
       <div class="modal__form">
-        <form action="sendEmail.php" method="POST" enctype="multipart/form-data">
-          <div class="form-control">
-            <input type="text" name="callback_name" placeholder="Name" required>
+        <form action="sendEmail.php" method="GET" class="needs-validation" novalidate>
+          <div class="form-group">
+            <input type="text" class="form-control" name="callback_name" placeholder="Name" required>
+            <div class="invalid-feedback">*Please fill in the right Name</div>
           </div>
-          <div class="form-control">
-            <input type="email" name="callback_email" placeholder="Email" required>
+          <div class="form-group">
+            <input type="email" class="form-control" name="callback_email" placeholder="Email" required>
+            <div class="invalid-feedback">*Please fill in the right Email</div>
           </div>
-          <div class="form-control form-textarea">
-            <textarea name="callback_message" placeholder="Message" required></textarea>
+          <div class="form-group form-textarea">
+            <textarea class="form-control" name="callback_message" placeholder="Message" required></textarea>
+            <div class="invalid-feedback">*Please fill the Message</div>
           </div>
-          <div class="form-control form-checkbox">
-            <input type="checkbox" id="modal-checkbox">
-            <label for="modal-checkbox">Ich habe die <a href="#">Datenschutzerklärung</a> zur Kenntnis genommen. Ich stimme zu, dass meine
+          <div class="form-group form-checkbox">
+            <input type="checkbox" id="contact_checkbox">
+            <label for="contact_checkbox">Ich habe die <a href="#">Datenschutzerklärung</a> zur Kenntnis genommen.
+              Ich stimme zu, dass meine
               Angaben zur Beantwortung meiner Anfrage erhoben und gespeichert werden.</label>
           </div>
-          <div class="form-control form-submit">
+          <div class="form-group form-submit">
             <button class="btn btn-primary">Please contact me</button>
           </div>
         </form>

@@ -25,13 +25,13 @@
               <div class="contact-person__position">Managing Director & SEO Expert</div>
             </div>
           </div>
-          <ul class="contact-person__benefits" data-aos="fade-up" data-aos-delay="400"> 
+          <ul class="contact-person__benefits" data-aos="fade-up" data-aos-delay="400">
             <li>Benefit 1</li>
             <li>Benefit 2</li>
             <li>Benefit 3</li>
           </ul>
         </div>
-        <div class="contact-hero__form" data-aos="fade-left" data-aos-delay="700">
+        <div class="contact-hero__form contact-component" data-aos="fade-left" data-aos-delay="700">
           <div class="contact-hero__form_inner">
             <div class="contact-component__form">
               <div class="contact-hero__form_additional hidden-lg">
@@ -53,23 +53,26 @@
                 <p>Tel.:<a href="tel:+498999529096">+49 (0) 89/995 290 96</a></p>
               </div>
               <div class="contact-component__form_title">Or send us a message</div>
-              <form action="sendEmail.php" method="POST">
-                <div class="form-control">
-                  <input type="text" name="callback_name" placeholder="Name" required>
+              <form action="sendEmail.php" method="GET" class="needs-validation" novalidate>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="callback_name" placeholder="Name" required>
+                  <div class="invalid-feedback">*Please fill in the right Name</div>
                 </div>
-                <div class="form-control">
-                  <input type="email" name="callback_email" placeholder="Email" required>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="callback_email" placeholder="Email" required>
+                  <div class="invalid-feedback">*Please fill in the right Email</div>
                 </div>
-                <div class="form-control form-textarea">
-                  <textarea name="callback_message" placeholder="Message" required></textarea>
+                <div class="form-group form-textarea">
+                  <textarea class="form-control" name="callback_message" placeholder="Message" required></textarea>
+                  <div class="invalid-feedback">*Please fill the Message</div>
                 </div>
-                <div class="form-control form-checkbox">
+                <div class="form-group form-checkbox">
                   <input type="checkbox" id="contact-checkbox">
                   <label for="contact-checkbox">Ich habe die <a href="#">Datenschutzerklärung</a> zur Kenntnis genommen.
                     Ich stimme zu, dass meine
                     Angaben zur Beantwortung meiner Anfrage erhoben und gespeichert werden.</label>
                 </div>
-                <div class="form-control form-submit">
+                <div class="form-group form-submit">
                   <button class="btn btn-secondary">Please contact me</button>
                 </div>
               </form>

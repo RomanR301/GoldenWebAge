@@ -15,6 +15,17 @@ let front = {
           prevEl: '.swiper-button-prev',
         },
       });
+      var swiper = new Swiper('.team-carousel', {
+        slidesPerView: 'auto',
+        centeredSlides: false,
+        
+        loop: true,
+        spaceBetween: 60,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
       AOS.init({
         // Global settings:
         disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -243,3 +254,23 @@ var rellax = new Rellax('.rellax', {
   // vertical: true,
   // horizontal: false
 });
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+

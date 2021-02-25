@@ -123,3 +123,18 @@
     font-size: 45px;
   }
 }
+
+.modal__content {
+  .form-group input:focus, .form-group textarea:focus {
+    background: $whiteColor;
+  }
+  .custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
+    color: $whiteColor;
+    &::placeholder  {
+      color: $whiteColor;
+    }
+    &::-moz-placeholder {
+      color: $whiteColor;
+    }
+  }
+}
