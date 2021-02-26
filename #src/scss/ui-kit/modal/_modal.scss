@@ -124,8 +124,9 @@
   }
 }
 
-.modal__content {
-  .form-group input:focus, .form-group textarea:focus {
+.modal__content, .wpcf7-form {
+  
+  .form-group input:focus, .wpcf7-form-control-wrap input:focus, .form-group textarea:focus  {
     background: $whiteColor;
   }
   .custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {

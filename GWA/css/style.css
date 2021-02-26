@@ -1818,28 +1818,44 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .modal__content .form-group input:focus,
-.modal__content .form-group textarea:focus {
+.modal__content .wpcf7-form-control-wrap input:focus,
+.modal__content .form-group textarea:focus,
+.wpcf7-form .form-group input:focus,
+.wpcf7-form .wpcf7-form-control-wrap input:focus,
+.wpcf7-form .form-group textarea:focus {
   background: #ffffff;
 }
 
 .modal__content .custom-select.is-invalid,
 .modal__content .form-control.is-invalid,
 .modal__content .was-validated .custom-select:invalid,
-.modal__content .was-validated .form-control:invalid {
+.modal__content .was-validated .form-control:invalid,
+.wpcf7-form .custom-select.is-invalid,
+.wpcf7-form .form-control.is-invalid,
+.wpcf7-form .was-validated .custom-select:invalid,
+.wpcf7-form .was-validated .form-control:invalid {
   color: #ffffff;
 }
 
 .modal__content .custom-select.is-invalid::placeholder,
 .modal__content .form-control.is-invalid::placeholder,
 .modal__content .was-validated .custom-select:invalid::placeholder,
-.modal__content .was-validated .form-control:invalid::placeholder {
+.modal__content .was-validated .form-control:invalid::placeholder,
+.wpcf7-form .custom-select.is-invalid::placeholder,
+.wpcf7-form .form-control.is-invalid::placeholder,
+.wpcf7-form .was-validated .custom-select:invalid::placeholder,
+.wpcf7-form .was-validated .form-control:invalid::placeholder {
   color: #ffffff;
 }
 
 .modal__content .custom-select.is-invalid::-moz-placeholder,
 .modal__content .form-control.is-invalid::-moz-placeholder,
 .modal__content .was-validated .custom-select:invalid::-moz-placeholder,
-.modal__content .was-validated .form-control:invalid::-moz-placeholder {
+.modal__content .was-validated .form-control:invalid::-moz-placeholder,
+.wpcf7-form .custom-select.is-invalid::-moz-placeholder,
+.wpcf7-form .form-control.is-invalid::-moz-placeholder,
+.wpcf7-form .was-validated .custom-select:invalid::-moz-placeholder,
+.wpcf7-form .was-validated .form-control:invalid::-moz-placeholder {
   color: #ffffff;
 }
 
@@ -1953,7 +1969,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   outline: none;
 }
 
-.form-group {
+.form-group,
+.wpcf7-form-control-wrap {
   height: 64px;
   margin-bottom: 20px;
   display: flex;
@@ -1961,35 +1978,43 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   align-items: flex-start;
 }
 
-.form-group.form-textarea {
+.form-group.form-textarea,
+.wpcf7-form-control-wrap.form-textarea {
   height: 160px;
 }
 
-.form-group.form-submit {
+.form-group.form-submit,
+.wpcf7-form-control-wrap.form-submit {
   margin: 0;
 }
 
-.form-group.form-checkbox {
+.form-group.form-checkbox,
+.wpcf7-form-control-wrap.form-checkbox {
   height: auto;
 }
 
-.form-group.form-checkbox label {
+.form-group.form-checkbox label,
+.wpcf7-form-control-wrap.form-checkbox label {
   color: #5C5C5C;
 }
 
-.form-group.form-checkbox a {
+.form-group.form-checkbox a,
+.wpcf7-form-control-wrap.form-checkbox a {
   font-weight: 700;
   color: #5C5C5C;
 }
 
-.form-group.form-submit .btn {
+.form-group.form-submit .btn,
+.wpcf7-form-control-wrap.form-submit .btn {
   border-radius: 20px;
   padding: 15px 24px;
   outline: none;
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -2010,17 +2035,23 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .form-group input::placeholder,
-.form-group textarea::placeholder {
+.form-group textarea::placeholder,
+.wpcf7-form-control-wrap input::placeholder,
+.wpcf7-form-control-wrap textarea::placeholder {
   color: #5C5C5C;
 }
 
 .form-group input::-moz-placeholder,
-.form-group textarea::-moz-placeholder {
+.form-group textarea::-moz-placeholder,
+.wpcf7-form-control-wrap input::-moz-placeholder,
+.wpcf7-form-control-wrap textarea::-moz-placeholder {
   color: #5C5C5C;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.wpcf7-form-control-wrap input:focus,
+.wpcf7-form-control-wrap textarea:focus {
   outline: none;
   box-shadow: 0 0 0 0.25rem rgba(212, 185, 130, 0.5);
   background: #B89B61;
@@ -2121,6 +2152,33 @@ input[type="checkbox"]:checked + label:before {
   font-size: 14px;
   line-height: 20px;
   color: #B80101;
+}
+
+.blog-detail .wpcf7-form-control-wrap {
+  width: 400px;
+}
+
+.blog-detail .wpcf7-submit {
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  line-height: 1;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #D4B982;
+  color: #ffffff;
+}
+
+.blog-detail .wpcf7-submit:hover {
+  background: transparent;
+  color: #D4B982;
+  border-color: #D4B982;
 }
 
 .page-about,
@@ -7770,6 +7828,12 @@ button.swiper-pagination-bullet {
   .case-detail__content .row.entry-row:before {
     height: 150px;
     top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .blog-detail .wpcf7-form-control-wrap {
+    width: 100%;
   }
 }
 

@@ -1,7 +1,7 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.form-group {
+.form-group,  .wpcf7-form-control-wrap {
   height: 64px;
   margin-bottom: 20px;
   display: flex;
@@ -130,4 +130,31 @@ input[type="checkbox"]:checked + label:before {
   font-size: 14px;
   line-height: 20px;
   color: #B80101;
+}
+
+.blog-detail {
+  .wpcf7-form-control-wrap {
+    width: 400px;
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+  .wpcf7-submit {
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    line-height: 1;
+    @include transition(.3);
+    background: $goldenColor;
+    color: $whiteColor;
+    &:hover {
+      background: transparent;
+      color: $goldenColor;
+      border-color: $goldenColor;
+    }
+  }
 }
